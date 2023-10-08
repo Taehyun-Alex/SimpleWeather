@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleWeather.SearchPage"
+             Title="SearchPage">
+    <Frame
+        Margin="20"
+        CornerRadius="40"
+        BackgroundColor="LightGray">
+        <Grid
+            RowDefinitions="0.1*, 0.05*, 0.85*"
+            ColumnDefinitions="0.9*, 0.1*">
+            <HorizontalStackLayout>
+                <ImageButton Source="left_arrow.svg"
+                    Grid.Row="0"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Margin="20" />
+
+                <Entry Placeholder="Suburb, city, country"
+                       PlaceholderColor="DarkGray"
+                       HorizontalTextAlignment="Start"
+                       Grid.Row="0"
+                       VerticalOptions="Start"
+                       HorizontalOptions="FillAndExpand"
+                       Margin="20,0"
+                       MaximumWidthRequest="300"/>
+            </HorizontalStackLayout>
+
+            <ImageButton Source="x_button.svg"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalOptions="Start"
+                    HorizontalOptions="End"
+                    Margin="20" />
+
+            <BoxView Color="Gray"
+                 HeightRequest="1"
+                 Grid.Row="1"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"  />
+            
+            <Frame Grid.Row="2"
+               CornerRadius="10"
+                   Grid.ColumnSpan="2"
+               BackgroundColor="LightGray">
+
+                <ScrollView>
+                    <StackLayout>
+                        <Label Text="Perth" />
+                        <Label Text="Peru" />
+                        <Label Text="Pakistan" />
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+        </Grid>
+    </Frame>
+</ContentPage>

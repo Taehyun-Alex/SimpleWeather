@@ -1,0 +1,83 @@
+is_global = true
+build_property.TargetFramework = net6.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SimpleWeather
+build_property.ProjectDir = C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\SimpleWeather\
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/FavouritesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.FavouritesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = FavouritesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = FavouritesPage.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/SearchPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.SearchPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SearchPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SearchPage.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/SettingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.SettingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SettingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SettingPage.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/Views/FavouritesPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Views.FavouritesPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FavouritesPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FavouritesPageView.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/Views/MainPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Views.MainPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainPageView.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/Views/SearchPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Views.SearchPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SearchPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SearchPageView.xaml
+
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/SimpleWeather/Views/SettingPageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Views.SettingPageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SettingPageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SettingPageView.xaml

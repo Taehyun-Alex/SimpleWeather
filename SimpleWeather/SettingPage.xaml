@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleWeather.Settings"
+             Title="Settings">
+    <Grid RowDefinitions="0.1*, 0.45*, 0.05*, 0.35*, 0.05*"
+              Margin="20">
+        <Label Text="Weather Settings"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="Center"
+               FontFamily="Saira-VariableFont.ttf"/>
+        <ImageButton Source="x_button.svg"
+                     HorizontalOptions="End"/>
+        <Frame BackgroundColor="LightSteelBlue"
+               Grid.Row="1"
+               BorderColor="PeachPuff"
+               Margin="20"
+               CornerRadius="10"
+               HasShadow="True">
+            <Grid RowDefinitions="*, *, *, *"
+                  ColumnDefinitions="0.4*, 0.3*, 0.3*">
+                <Label Text="Unit"
+                       Grid.Row="0"
+                       FontFamily="Saira-VariableFont.ttf"
+                       Margin="20"
+                       VerticalTextAlignment="Center"/>
+                <Label Text="Auto Refresh"
+                       Grid.Row="1"
+                       FontFamily="Saira-VariableFont.ttf"
+                       Margin="20"
+                       VerticalTextAlignment="Center"/>
+                <Label Text="Notifications"
+                       Grid.Row="2"
+                       FontFamily="Saira-VariableFont.ttf"
+                       Margin="20"
+                       VerticalTextAlignment="Center"/>
+                <Label Text="Dark mode"
+                       Grid.Row="3"
+                       FontFamily="Saira-VariableFont.ttf"
+                       Margin="20"
+                       VerticalTextAlignment="Center"/>
+                
+                <Frame Grid.Row="0"
+                       Grid.Column="1"
+                       BorderColor="Bisque"
+                       BackgroundColor="White"
+                       CornerRadius="45"
+                       Grid.ColumnSpan="2"
+                       HeightRequest="80">
+                    <Grid>
+                        <Label Text="C" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="20,0,0,0" />
+
+                        <BoxView BackgroundColor="Gray" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Margin="10,0" />
+
+                        <Label Text="F" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,20,0" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="1"
+                       Grid.Column="1"
+                       BorderColor="Bisque"
+                       BackgroundColor="White"
+                       CornerRadius="45"
+                       Grid.ColumnSpan="2"
+                       HeightRequest="80">
+                    <Grid>
+                        <Label Text="5m" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="20,0,0,0" />
+                        <BoxView BackgroundColor="Gray" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Margin="0, 0, 200, 0" />
+
+                        <Label Text="15m" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="120,0,0,0" />
+                        <BoxView BackgroundColor="Gray" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Margin="10,0" />
+
+                        <Label Text="60m" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="100,0,0,0" />
+                        <BoxView BackgroundColor="Gray" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand" Margin="80,0" />
+                        <Label Text="120m" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,20,0" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="2"
+                       Grid.Column="1"
+                       BorderColor="Bisque"
+                       BackgroundColor="White"
+                       CornerRadius="45"
+                       Grid.ColumnSpan="2"
+                       HeightRequest="80">
+                    <Grid>
+                        <Label Text="Off" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="20,0,0,0" />
+
+                        <BoxView BackgroundColor="Gray" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Margin="10,0" />
+
+                        <Label Text="On" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,20,0" />
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="3"
+                       Grid.Column="1"
+                       BorderColor="Bisque"
+                       BackgroundColor="White"
+                       CornerRadius="45"
+                       Grid.ColumnSpan="2"
+                       HeightRequest="80">
+                    <Grid>
+                        <Label Text="Off" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="20,0,0,0" />
+
+                        <BoxView BackgroundColor="Gray" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Margin="10,0" />
+
+                        <Label Text="On" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,20,0" />
+                    </Grid>
+                </Frame>
+            </Grid>
+
+        </Frame>
+        
+        <Label Text="Room for improvement?"
+               Grid.Row="2"
+               VerticalTextAlignment="Center"
+               FontFamily="Saira-VariableFont.ttf"
+               Margin="20,0,0,0"/>
+
+        <Frame BackgroundColor="LightSlateGray"
+                Grid.Row="3"
+                BorderColor="PeachPuff"
+                Margin="20"
+                CornerRadius="45"
+                HasShadow="True">
+            <Entry Placeholder="We love your opinion!"
+                   Margin="10"/>
+        </Frame>
+        <ImageButton Source="submit_button.svg"
+                     Grid.Row="4"
+                     HorizontalOptions="End"
+                     />
+
+
+    </Grid>
+</ContentPage>

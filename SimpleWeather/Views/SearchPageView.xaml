@@ -4,30 +4,36 @@
              x:Class="SimpleWeather.Views.SearchPageView"
              Title="SearchPageView">
     <Frame
-    Margin="20"
-    CornerRadius="40"
-    BackgroundColor="LightGray">
+        Margin="20"
+        CornerRadius="40"
+        BackgroundColor="LightGray">
+        
         <Grid
-        RowDefinitions="0.1*, 0.05*, 0.85*"
-        ColumnDefinitions="0.9*, 0.1*">
+            RowDefinitions="0.1*, 0.05*, 0.85*"
+            ColumnDefinitions="0.9*, 0.1*">
+            
             <HorizontalStackLayout>
-                <ImageButton Source="left_arrow.svg"
-                Grid.Row="0"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"
-                Margin="20" />
+                
+                <ImageButton
+                    Source="left_arrow.svg"
+                    Grid.Row="0"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Margin="20"/>
 
-                <Entry Placeholder="Suburb, city, country"
-                   PlaceholderColor="DarkGray"
-                   HorizontalTextAlignment="Start"
-                   Grid.Row="0"
-                   VerticalOptions="Start"
-                   HorizontalOptions="FillAndExpand"
-                   Margin="20,0"
-                   MaximumWidthRequest="300"/>
+                <Entry
+                    Placeholder="Suburb, city, country"
+                    PlaceholderColor="DarkGray"
+                    HorizontalTextAlignment="Start"
+                    Grid.Row="0"
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="20,0"
+                    MaximumWidthRequest="300"/>
             </HorizontalStackLayout>
 
-            <ImageButton Source="x_button.svg"
+            <ImageButton
+                Source="x_button.svg"
                 Grid.Row="0"
                 Grid.Column="1"
                 VerticalOptions="Start"
@@ -36,18 +42,20 @@
                 x:Name="gobackButton"
                 Clicked="gobackButton_Clicked"/>
 
-            <BoxView Color="Gray"
-             HeightRequest="1"
-             Grid.Row="1"
-             Grid.Column="0"
-             Grid.ColumnSpan="2"
-             HorizontalOptions="Center"
-             VerticalOptions="Center"  />
+            <BoxView
+                Color="Gray"
+                HeightRequest="1"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
 
-            <Frame Grid.Row="2"
-           CornerRadius="10"
-               Grid.ColumnSpan="2"
-           BackgroundColor="LightGray">
+            <Frame
+                Grid.Row="2"
+                CornerRadius="10"
+                Grid.ColumnSpan="2"
+                BackgroundColor="LightGray">
 
                 <ScrollView>
                     <StackLayout>

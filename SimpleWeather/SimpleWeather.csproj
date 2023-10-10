@@ -67,21 +67,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="SettingPAge.xaml.cs">
-	    <DependentUpon>SettingPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="FavouritesPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="SearchPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="SettingPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\FavouritesPageView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

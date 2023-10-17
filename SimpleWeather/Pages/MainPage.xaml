@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimpleWeather.Pages.MainPage"
+             xmlns:vm="clr-namespace:SimpleWeather.Models.ViewModels"
+             x:DataType="vm:MainPageView"
              Title="MainPage">
     
     <ScrollView VerticalOptions="FillAndExpand">
@@ -19,7 +21,8 @@
                 Grid.Column="6"
                 Grid.Row="0"
                 x:Name="searchButton"
-                Clicked="searchButton_Clicked"/>
+                Clicked="searchButton_Clicked"
+                Command="{Binding FetchWeatherInformationCommand}"/>
             
             <Image
                 Source="reload.svg"
@@ -28,16 +31,17 @@
                 Grid.Row="0"/>
             
             <Label
-                Text="Perth"
+                Text="{Binding City}"
                 Grid.Row="1"
                 Grid.Column="1"
                 FontSize="55"
                 x:Name="perthcity"
                 VerticalTextAlignment="Start"
-                FontFamily="Saira-VariableFont.ttf"/>
+                FontFamily="Saira-VariableFont.ttf"
+                />
             
             <Label
-                Text="16°"
+                Text="{Binding Temperature}"
                 Grid.Row="2"
                 Grid.Column="1"
                 FontSize="55"

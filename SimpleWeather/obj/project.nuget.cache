@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9AtFFG9evmcH3+yuzik7N+1iihdF1vqtVcPVOTSPlKq5K+ugfz8H6J7yp1ykfJXGTvZ8NkeJCZ15VoqqmYFDCA==",
+  "dgSpecHash": "oKjJKeZRv93yerA+RpzH5PFczpCEUn9kolCDx3wLxLRZxS3AC7iKtZzl4N09DILDPh7wtQsx3+sswVaSTYXy1g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\SimpleWeather\\SimpleWeather\\SimpleWeather.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl\\1.1.6\\microsoft.bcl.1.1.6.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.async\\1.0.165\\microsoft.bcl.async.1.0.165.nupkg.sha512",

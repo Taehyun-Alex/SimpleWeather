@@ -11,16 +11,16 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="Views\FavouritesPageView.xaml">
+    <MauiXaml Update="Pages\FavouritesPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\MainPageView.xaml">
+    <MauiXaml Update="Pages\MainPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\SearchPageView.xaml">
+    <MauiXaml Update="Pages\SearchPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\SettingPageView.xaml">
+    <MauiXaml Update="Pages\SettingPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

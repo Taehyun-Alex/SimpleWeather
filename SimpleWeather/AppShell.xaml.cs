@@ -1,4 +1,4 @@
-﻿using SimpleWeather.Views;
+﻿using SimpleWeather.Pages;
 
 namespace SimpleWeather;
 
@@ -9,10 +9,10 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
 
-		Routing.RegisterRoute(nameof(MainPageView), typeof(MainPageView));
-        Routing.RegisterRoute(nameof(SearchPageView), typeof(SearchPageView));
-        Routing.RegisterRoute(nameof(FavouritesPageView), typeof(FavouritesPageView));
-        Routing.RegisterRoute(nameof(SettingPageView), typeof(SettingPageView));
+		Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
+        Routing.RegisterRoute(nameof(SearchPage), typeof(SearchPage));
+        Routing.RegisterRoute(nameof(FavouritesPage), typeof(FavouritesPage));
+        Routing.RegisterRoute(nameof(SettingPage), typeof(SettingPage));
 
     }
 }

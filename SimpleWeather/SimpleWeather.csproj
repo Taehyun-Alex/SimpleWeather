@@ -67,18 +67,37 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\FavouritesPageView.xaml">
+	  <MauiXaml Update="Pages\FavouritesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\MainPageView.xaml">
+	  <MauiXaml Update="Pages\MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\SearchPageView.xaml">
+	  <MauiXaml Update="Pages\SearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\SettingPageView.xaml">
+	  <MauiXaml Update="Pages\SettingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Views\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\FavouritesPage.xaml.cs">
+	    <DependentUpon>FavouritesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\SearchPage.xaml.cs">
+	    <DependentUpon>SearchPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\SettingPage.xaml.cs">
+	    <DependentUpon>SettingPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

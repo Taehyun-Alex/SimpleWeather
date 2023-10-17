@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleWeather.Pages.FavouritesPage"
+             Title="FavouritesPage">
+    <Grid 
+        RowDefinitions="0.1*, 0.9*"
+        Margin="20">
+        
+        <Label 
+            Text="Favourites"
+            HorizontalOptions="Start"
+            FontFamily="Saira-VariableFont.ttf"
+            VerticalTextAlignment="Center"/>
+        
+        <ImageButton 
+            Source="x_button.svg"
+            HorizontalOptions="End"
+            x:Name="xButton"
+            Clicked="xButton_Clicked"/>
+        
+        <Frame
+            Grid.Row="1"
+            CornerRadius="40"
+            BackgroundColor="LightGray">
+            
+            <ScrollView>
+                
+                <Grid
+                    RowDefinitions="auto, auto, auto"
+                    ColumnDefinitions="auto, auto">
+                    
+                    <Label 
+                        Text="Perth" 
+                        Grid.Row="0" 
+                        Grid.Column="0"/>
+                    
+                    <ImageButton 
+                        Source="empty_loveheart.svg" 
+                        Grid.Row="0" 
+                        Grid.Column="1"/>
+
+                    <Label
+                        Text="Peru"
+                        Grid.Row="1"
+                        Grid.Column="0"/>
+                    
+                    <ImageButton 
+                        Source="empty_loveheart.svg"
+                        Grid.Row="1"
+                        Grid.Column="1"/>
+
+                    <Label
+                        Text="Pakistan"
+                        Grid.Row="2"
+                        Grid.Column="0"/>
+                    
+                    <ImageButton
+                        Source="empty_loveheart.svg"
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+                    
+                </Grid>
+            </ScrollView>
+        </Frame>
+    </Grid>
+</ContentPage>

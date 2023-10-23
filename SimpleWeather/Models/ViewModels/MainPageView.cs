@@ -30,7 +30,7 @@ namespace SimpleWeather.Models.ViewModels
             var weatherApiResponse = await _weatherApiService.GetWeatherInformation();
             if (weatherApiResponse != null)
             {
-                Temperature = weatherApiResponse.list[0].main.temp;
+                Temperature = weatherApiResponse.main.temp;
             }
         }
     }

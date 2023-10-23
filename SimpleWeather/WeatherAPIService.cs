@@ -15,7 +15,7 @@ namespace SimpleWeather
         public WeatherAPIService()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https0://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=");
+            _httpClient.BaseAddress = new Uri("https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=");
 
         }
 

@@ -8,23 +8,15 @@ using System.Threading.Tasks;
 
 namespace SimpleWeather.Models.ApiModels
 {
-    
+
 
     public class WeatherApiResponse
     {
-        [JsonPropertyName("details")]
-        public Details details { get; set; }
+        [JsonPropertyName("main")]
+        public Main main { get; set; }
 
     }
 
-    public class Rootobject
-    {
-        public string cod { get; set; }
-        public int message { get; set; }
-        public int cnt { get; set; }
-        public List[] list { get; set; }
-        public City city { get; set; }
-    }
 
     public class City
     {
@@ -47,7 +39,7 @@ namespace SimpleWeather.Models.ApiModels
     public class List
     {
         public int dt { get; set; }
-        public Details main { get; set; }
+        public Main main { get; set; }
         public Weather[] weather { get; set; }
         public Clouds clouds { get; set; }
         public Wind wind { get; set; }
@@ -58,7 +50,7 @@ namespace SimpleWeather.Models.ApiModels
         public Rain rain { get; set; }
     }
 
-    public class Details
+    public class Main
     {
         public float temp { get; set; }
         public float feels_like { get; set; }
@@ -100,5 +92,6 @@ namespace SimpleWeather.Models.ApiModels
         public string description { get; set; }
         public string icon { get; set; }
     }
+
 
 }

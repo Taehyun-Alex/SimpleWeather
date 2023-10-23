@@ -21,7 +21,6 @@
                 Grid.Column="6"
                 Grid.Row="0"
                 x:Name="searchButton"
-                Clicked="searchButton_Clicked"
                 Command="{Binding FetchWeatherInformationCommand}"/>
             
             <Image
@@ -44,7 +43,7 @@
                 Text="{Binding Temperature}"
                 Grid.Row="2"
                 Grid.Column="1"
-                FontSize="55"
+                FontSize="40"
                 FontFamily="Saira-VariableFont.ttf"
                 FontAttributes="Bold"/>
             

@@ -1,4 +1,5 @@
-﻿using SimpleWeather.Models.ApiModels;
+﻿using Newtonsoft.Json;
+using SimpleWeather.Models.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,23 +9,14 @@ using System.Threading.Tasks;
 
 namespace SimpleWeather
 {
-    internal class WeatherAPIService
+    public class WeatherAPIService
     {
-        private readonly HttpClient _httpClient;
 
-        public WeatherAPIService()
+        public static async Task<Root> GetWeatherInformation()
         {
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=");
-
-        }
-
-        public async Task<WeatherApiResponse> GetWeatherInformation()
-        {
-            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
-                return null;
-
-            return await _httpClient.GetFromJsonAsync<WeatherApiResponse>("557e4ffb0a6ad8eb685bb13051d4a230");
+            var httpClient = new HttpClient();
+            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=557e4ffb0a6ad8eb685bb13051d4a230"));
+            return JsonConvert.DeserializeObject<Root>(response);
         }
         
 

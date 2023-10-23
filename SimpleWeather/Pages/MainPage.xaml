@@ -21,8 +21,8 @@
                 Grid.Column="6"
                 Grid.Row="0"
                 x:Name="searchButton"
-                Command="{Binding FetchWeatherInformationCommand}"/>
-            
+                />
+
             <Image
                 Source="reload.svg"
                 Grid.Column="2"
@@ -30,7 +30,6 @@
                 Grid.Row="0"/>
             
             <Label
-                Text="{Binding City}"
                 Grid.Row="1"
                 Grid.Column="1"
                 FontSize="55"
@@ -40,7 +39,7 @@
                 />
             
             <Label
-                Text="{Binding Temperature}"
+                x:Name="temp_label"
                 Grid.Row="2"
                 Grid.Column="1"
                 FontSize="40"

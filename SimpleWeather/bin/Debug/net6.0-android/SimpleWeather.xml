@@ -4,45 +4,5 @@
         <name>SimpleWeather</name>
     </assembly>
     <members>
-        <member name="T:SimpleWeather.Models.ViewModels.MainPageView">
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="P:SimpleWeather.Models.ViewModels.MainPageView.City">
-            <inheritdoc cref="F:SimpleWeather.Models.ViewModels.MainPageView.city"/>
-        </member>
-        <member name="P:SimpleWeather.Models.ViewModels.MainPageView.Temperature">
-            <inheritdoc cref="F:SimpleWeather.Models.ViewModels.MainPageView.temperature"/>
-        </member>
-        <member name="F:SimpleWeather.Models.ViewModels.MainPageView.fetchWeatherInformationCommand">
-            <summary>The backing field for <see cref="P:SimpleWeather.Models.ViewModels.MainPageView.FetchWeatherInformationCommand"/>.</summary>
-        </member>
-        <member name="P:SimpleWeather.Models.ViewModels.MainPageView.FetchWeatherInformationCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SimpleWeather.Models.ViewModels.MainPageView.FetchWeatherInformation"/>.</summary>
-        </member>
-        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
-            <summary>
-            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
-            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
-            </summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.City">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "City" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Temperature">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Temperature" generated properties.</summary>
-        </member>
-        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
-            <summary>
-            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
-            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
-            </summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.City">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "City" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Temperature">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Temperature" generated properties.</summary>
-        </member>
     </members>
 </doc>

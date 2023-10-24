@@ -15,31 +15,9 @@ namespace SimpleWeather
         public static async Task<Root> GetWeatherInformation()
         {
             var httpClient = new HttpClient();
-            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=557e4ffb0a6ad8eb685bb13051d4a230"));
+            var response = await httpClient.GetStringAsync(string.Format("https://pro.openweathermap.org/data/2.5/forecast/hourly?q=perth&appid=59a4ade3192313d407110c1eb429f1a8&units=metric&cnt=10"));
             return JsonConvert.DeserializeObject<Root>(response);
         }
         
-
-        //static string baseURL = "https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=";
-
-        //public static async Task<List<string>> GetTemp ()
-        //{
-        //    List<string> temps = new List<string>();
-
-        //    string endpoint = baseURL + "temp";
-
-        //    HttpClient client = new HttpClient();
-
-        //    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, endpoint);
-        //    request.Headers.Add("apikey", "557e4ffb0a6ad8eb685bb13051d4a230");
-        //    HttpResponseMessage response = await client.SendAsync(request);
-
-        //    if(response.IsSuccessStatusCode)
-        //    {
-        //        WeatherResponseModel model = (WeatherResponseModel)await response.Content.ReadFromJsonAsync(typeof(WeatherResponseModel));
-        //    }
-
-        //    return temps;
-        //}
     }
 }

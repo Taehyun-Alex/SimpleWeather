@@ -278,6 +278,15 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
+      },
       "Xamarin.Android.Glide/4.12.0.8": {
         "type": "package",
         "dependencies": {
@@ -2268,6 +2277,15 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       },
       "Xamarin.Android.Glide/4.12.0.8": {
@@ -4262,6 +4280,15 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
+      },
       "Xamarin.Android.Glide/4.12.0.8": {
         "type": "package",
         "dependencies": {
@@ -6252,6 +6279,15 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       },
       "Xamarin.Android.Glide/4.12.0.8": {
@@ -8246,6 +8282,15 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
+      },
       "Xamarin.Android.Glide/4.12.0.8": {
         "type": "package",
         "dependencies": {
@@ -10236,6 +10281,15 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       },
       "Xamarin.Android.Glide/4.12.0.8": {
@@ -12230,6 +12284,15 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
+      },
       "Xamarin.Android.Glide/4.12.0.8": {
         "type": "package",
         "dependencies": {
@@ -14220,6 +14283,15 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       },
       "Xamarin.Android.Glide/4.12.0.8": {
@@ -16240,6 +16312,15 @@
             "related": ".xml"
           }
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-ios16.1/android-arm": {
@@ -16544,6 +16625,15 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -16850,6 +16940,15 @@
             "related": ".xml"
           }
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-ios16.1/android-x64": {
@@ -17154,6 +17253,15 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -17460,6 +17568,15 @@
             "related": ".xml"
           }
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-ios16.1/iossimulator-x64": {
@@ -17764,6 +17881,15 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -18070,6 +18196,15 @@
             "related": ".xml"
           }
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-ios16.1/win10-x64": {
@@ -18374,6 +18509,15 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -18680,6 +18824,15 @@
             "related": ".xml"
           }
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-maccatalyst16.1/android-arm": {
@@ -18984,6 +19137,15 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -19290,6 +19452,15 @@
             "related": ".xml"
           }
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-maccatalyst16.1/android-x64": {
@@ -19594,6 +19765,15 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -19900,6 +20080,15 @@
             "related": ".xml"
           }
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-maccatalyst16.1/iossimulator-x64": {
@@ -20204,6 +20393,15 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -20510,6 +20708,15 @@
             "related": ".xml"
           }
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-maccatalyst16.1/win10-x64": {
@@ -20814,6 +21021,15 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -21246,6 +21462,15 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-windows10.0.19041/android-arm": {
@@ -21648,6 +21873,15 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -22052,6 +22286,15 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-windows10.0.19041/android-x64": {
@@ -22454,6 +22697,15 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -22858,6 +23110,15 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-windows10.0.19041/iossimulator-x64": {
@@ -23261,6 +23522,15 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        }
       }
     },
     "net6.0-windows10.0.19041/maccatalyst-x64": {
@@ -23663,6 +23933,15 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     },
@@ -24072,6 +24351,15 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "UtcTimeLibrary/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {}
         }
       }
     }
@@ -25553,6 +25841,18 @@
         "system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
         "system.runtime.interopservices.nfloat.internal.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "UtcTimeLibrary/1.0.0": {
+      "sha512": "KtUbL4QOHkhHBvODfRiiUxnZVSHuNjOS5C00RtXKmEs35E4uyq4caHVLb+xRqxPN52IbGlIUCuBvbDi474XSHQ==",
+      "type": "package",
+      "path": "utctimelibrary/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/UtcTimeLibrary.dll",
+        "utctimelibrary.1.0.0.nupkg.sha512",
+        "utctimelibrary.nuspec"
       ]
     },
     "Xamarin.Android.Glide/4.12.0.8": {
@@ -27416,7 +27716,8 @@
       "Microsoft.Maui.Dependencies >= 6.0.553",
       "Microsoft.Maui.Extensions >= 6.0.553",
       "Newtonsoft.Json >= 13.0.3",
-      "PCLStorage >= 1.0.2"
+      "PCLStorage >= 1.0.2",
+      "UtcTimeLibrary >= 1.0.0"
     ],
     "net6.0-ios16.1": [
       "CommunityToolkit.Mvvm >= 8.2.1",
@@ -27424,7 +27725,8 @@
       "Microsoft.Maui.Extensions >= 6.0.553",
       "Newtonsoft.Json >= 13.0.3",
       "PCLStorage >= 1.0.2",
-      "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1"
+      "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1",
+      "UtcTimeLibrary >= 1.0.0"
     ],
     "net6.0-maccatalyst16.1": [
       "CommunityToolkit.Mvvm >= 8.2.1",
@@ -27432,35 +27734,37 @@
       "Microsoft.Maui.Extensions >= 6.0.553",
       "Newtonsoft.Json >= 13.0.3",
       "PCLStorage >= 1.0.2",
-      "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1"
+      "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1",
+      "UtcTimeLibrary >= 1.0.0"
     ],
     "net6.0-windows10.0.19041": [
       "CommunityToolkit.Mvvm >= 8.2.1",
       "Microsoft.Maui.Dependencies >= 6.0.553",
       "Microsoft.Maui.Extensions >= 6.0.553",
       "Newtonsoft.Json >= 13.0.3",
-      "PCLStorage >= 1.0.2"
+      "PCLStorage >= 1.0.2",
+      "UtcTimeLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\20101299\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\SimpleWeather\\SimpleWeather\\SimpleWeather.csproj",
+      "projectUniqueName": "C:\\Users\\20101299\\repo\\SimpleWeather\\SimpleWeather\\SimpleWeather.csproj",
       "projectName": "SimpleWeather",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\SimpleWeather\\SimpleWeather\\SimpleWeather.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\SimpleWeather\\SimpleWeather\\obj\\",
+      "projectPath": "C:\\Users\\20101299\\repo\\SimpleWeather\\SimpleWeather\\SimpleWeather.csproj",
+      "packagesPath": "C:\\Users\\20101299\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\20101299\\repo\\SimpleWeather\\SimpleWeather\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\20101299\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -27524,6 +27828,10 @@
           "PCLStorage": {
             "target": "Package",
             "version": "[1.0.2, )"
+          },
+          "UtcTimeLibrary": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -27560,15 +27868,15 @@
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.android",
@@ -27612,7 +27920,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-ios16.1": {
         "targetAlias": "net6.0-ios",
@@ -27643,6 +27951,10 @@
             "target": "Package",
             "version": "[6.0.1, )",
             "autoReferenced": true
+          },
+          "UtcTimeLibrary": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -27707,7 +28019,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-maccatalyst16.1": {
         "targetAlias": "net6.0-maccatalyst",
@@ -27738,6 +28050,10 @@
             "target": "Package",
             "version": "[6.0.1, )",
             "autoReferenced": true
+          },
+          "UtcTimeLibrary": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -27803,7 +28119,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-windows10.0.19041": {
         "targetAlias": "net6.0-windows10.0.19041.0",
@@ -27829,6 +28145,10 @@
           "PCLStorage": {
             "target": "Package",
             "version": "[1.0.2, )"
+          },
+          "UtcTimeLibrary": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -27845,7 +28165,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.win",
@@ -27873,7 +28193,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -27881,7 +28201,7 @@
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           }
         ],
         "frameworkReferences": {
@@ -27901,7 +28221,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

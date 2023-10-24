@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimpleWeather.Pages.MainPage"
-             xmlns:vm="clr-namespace:SimpleWeather.Models.ViewModels"
-             x:DataType="vm:MainPageView"
+             xmlns:ApiModels="clr-namespace:SimpleWeather.Models.ApiModels"
+             
              Title="MainPage">
     
     <ScrollView VerticalOptions="FillAndExpand">
@@ -32,8 +32,8 @@
             <Label
                 Grid.Row="1"
                 Grid.Column="1"
-                FontSize="55"
-                x:Name="perthcity"
+                FontSize="20"
+                x:Name="city_label"
                 VerticalTextAlignment="Start"
                 FontFamily="Saira-VariableFont.ttf"
                 />
@@ -47,21 +47,21 @@
                 FontAttributes="Bold"/>
             
             <Label
-                Text="Tue, 22:37"
+                x:Name="time_label"
                 Grid.Row="3"
                 Grid.Column="1"
-                FontSize="25"
+                FontSize="20"
                 FontFamily="Saira-VariableFont.ttf"/>
             
             <Label
-                Text="60%"
+                x:Name="humid_label"
                 Grid.Row="3"
                 Grid.Column="2"
-                FontSize="25"
+                FontSize="20"
                 FontFamily="Saira-VariableFont.ttf"/>
             
             <Label
-                Text="15 Aug 2023"
+                x:Name="time_label2"
                 Grid.Row="1"
                 Grid.Column="3"
                 FontFamily="Saira-VariableFont.ttf"
@@ -89,220 +89,251 @@
                 BackgroundColor="LightGrey"
                 BorderColor="AliceBlue">
 
-                <Grid
-                    ColumnDefinitions="0.5*, 0.125*, 0.125*, 0.125*, 0.125*"
-                    RowDefinitions="*, *, *, *, *, *, *">
+                <CollectionView x:Name="CvWeather">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                                           ItemSpacing="20" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="2*, *, *, *">
+                                <Label
+                                    Text="{Binding currentTime}"
+                                    Grid.Column="0"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="15/08 Tuesday"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"/>
+                                <Label  Grid.Column="1">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding main.humidity}" />
+                                            <Span Text="%" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                    
+                                    
+                               
 
-                    <Label
-                        Text="16/08 Wednesday"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"/>
+                                <!--<Image
+                                    Source="heavy_rain.svg"
+                                    Grid.Row="5"
+                                    Grid.Column="2"
+                                    HeightRequest="50"/>-->
 
-                    <Label
-                        Text="17/08 Thursday"
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="{Binding main.temp}"
+                                    Grid.Column="3"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="18/08 Friday"
-                        Grid.Row="3"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="19/08 Saturday"
-                        Grid.Row="4"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="20/08 Sunday"
-                        Grid.Row="5"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"/>
+                                <!--<Label
+                                    Text="16/08 Wednesday"
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="21/08 Monday"
-                        Grid.Row="6"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="17/08 Thursday"
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="60%"
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="18/08 Friday"
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="22%"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="19/08 Saturday"
+                                    Grid.Row="4"
+                                    Grid.Column="0"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="0%"
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="20/08 Sunday"
+                                    Grid.Row="5"
+                                    Grid.Column="0"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="5%"
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="21/08 Monday"
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="1%"
-                        Grid.Row="4"
-                        Grid.Column="1"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="60%"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="0%"
-                        Grid.Row="5"
-                        Grid.Column="1"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="22%"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="0%"
-                        Grid.Row="6"
-                        Grid.Column="1"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="0%"
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Image
-                        Source="heavy_rain.svg"
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        HeightRequest="50"/>
+                                <Label
+                                    Text="5%"
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Image
-                        Source="heavy_rain.svg"
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        HeightRequest="50"/>
+                                <Label
+                                    Text="1%"
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Image
-                        Source="heavy_rain.svg"
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        HeightRequest="50"/>
+                                <Label
+                                    Text="0%"
+                                    Grid.Row="5"
+                                    Grid.Column="1"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Image
-                        Source="heavy_rain.svg"
-                        Grid.Row="3"
-                        Grid.Column="2"
-                        HeightRequest="50"/>
+                                <Label
+                                    Text="0%"
+                                    Grid.Row="6"
+                                    Grid.Column="1"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Image
-                        Source="heavy_rain.svg"
-                        Grid.Row="4"
-                        Grid.Column="2"
-                        HeightRequest="50"/>
+                                <Image
+                                    Source="heavy_rain.svg"
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    HeightRequest="50"/>
 
-                    <Image
-                        Source="heavy_rain.svg"
-                        Grid.Row="5"
-                        Grid.Column="2"
-                        HeightRequest="50"/>
+                                <Image
+                                    Source="heavy_rain.svg"
+                                    Grid.Row="1"
+                                    Grid.Column="2"
+                                    HeightRequest="50"/>
 
-                    <Image
-                        Source="heavy_rain.svg"
-                        Grid.Row="6"
-                        Grid.Column="2"
-                        HeightRequest="50"/>
+                                <Image
+                                    Source="heavy_rain.svg"
+                                    Grid.Row="2"
+                                    Grid.Column="2"
+                                    HeightRequest="50"/>
 
-                    <Label
-                        Text="5°"
-                        Grid.Row="0"
-                        Grid.Column="3"
-                        VerticalTextAlignment="Center"/>
+                                <Image
+                                    Source="heavy_rain.svg"
+                                    Grid.Row="3"
+                                    Grid.Column="2"
+                                    HeightRequest="50"/>
 
-                    <Label
-                        Text="10°"
-                        Grid.Row="1"
-                        Grid.Column="3"
-                        VerticalTextAlignment="Center"/>
+                                <Image
+                                    Source="heavy_rain.svg"
+                                    Grid.Row="4"
+                                    Grid.Column="2"
+                                    HeightRequest="50"/>
 
-                    <Label
-                        Text="6°"
-                        Grid.Row="2"
-                        Grid.Column="3"
-                        VerticalTextAlignment="Center"/>
+                                <Image
+                                    Source="heavy_rain.svg"
+                                    Grid.Row="5"
+                                    Grid.Column="2"
+                                    HeightRequest="50"/>
 
-                    <Label
-                        Text="4°"
-                        Grid.Row="3"
-                        Grid.Column="3"
-                        VerticalTextAlignment="Center"/>
+                                <Image
+                                    Source="heavy_rain.svg"
+                                    Grid.Row="6"
+                                    Grid.Column="2"
+                                    HeightRequest="50"/>
 
-                    <Label
-                        Text="8°"
-                        Grid.Row="4"
-                        Grid.Column="3"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="{Binding temp}"
+                                    Grid.Row="0"
+                                    Grid.Column="3"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="6°"
-                        Grid.Row="5"
-                        Grid.Column="3"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="10°"
+                                    Grid.Row="1"
+                                    Grid.Column="3"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label Text="10°"
-                       Grid.Row="6"
-                       Grid.Column="3"
-                       VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="6°"
+                                    Grid.Row="2"
+                                    Grid.Column="3"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="10°"
-                        Grid.Row="0"
-                        Grid.Column="4"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="4°"
+                                    Grid.Row="3"
+                                    Grid.Column="3"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="15°"
-                        Grid.Row="1"
-                        Grid.Column="4"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="8°"
+                                    Grid.Row="4"
+                                    Grid.Column="3"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="16°"
-                        Grid.Row="2"
-                        Grid.Column="4"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="6°"
+                                    Grid.Row="5"
+                                    Grid.Column="3"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="14°"
-                        Grid.Row="3"
-                        Grid.Column="4"
-                        VerticalTextAlignment="Center"/>
+                                <Label Text="10°"
+                                   Grid.Row="6"
+                                   Grid.Column="3"
+                                   VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="15°"
-                        Grid.Row="4"
-                        Grid.Column="4"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="10°"
+                                    Grid.Row="0"
+                                    Grid.Column="4"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label 
-                        Text="14°"
-                        Grid.Row="5"
-                        Grid.Column="4"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="15°"
+                                    Grid.Row="1"
+                                    Grid.Column="4"
+                                    VerticalTextAlignment="Center"/>
 
-                    <Label
-                        Text="16°"
-                        Grid.Row="6"
-                        Grid.Column="4"
-                        VerticalTextAlignment="Center"/>
+                                <Label
+                                    Text="16°"
+                                    Grid.Row="2"
+                                    Grid.Column="4"
+                                    VerticalTextAlignment="Center"/>
 
-                </Grid>
+                                <Label
+                                    Text="14°"
+                                    Grid.Row="3"
+                                    Grid.Column="4"
+                                    VerticalTextAlignment="Center"/>
+
+                                <Label
+                                    Text="15°"
+                                    Grid.Row="4"
+                                    Grid.Column="4"
+                                    VerticalTextAlignment="Center"/>
+
+                                <Label 
+                                    Text="14°"
+                                    Grid.Row="5"
+                                    Grid.Column="4"
+                                    VerticalTextAlignment="Center"/>
+
+                                <Label
+                                    Text="16°"
+                                    Grid.Row="6"
+                                    Grid.Column="4"
+                                    VerticalTextAlignment="Center"/>-->
+
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </Frame>
         </Grid>
     </ScrollView>

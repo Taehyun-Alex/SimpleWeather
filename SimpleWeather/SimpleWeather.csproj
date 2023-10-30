@@ -53,6 +53,24 @@
 	  <None Remove="Resources\AppIcon\sunny.svg" />
 	  <None Remove="Resources\Fonts\Rosarivo-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Saira-VariableFont_wdth,wght.ttf" />
+	  <None Remove="Resources\Images\01d.png" />
+	  <None Remove="Resources\Images\01n.png" />
+	  <None Remove="Resources\Images\02d.png" />
+	  <None Remove="Resources\Images\02n.png" />
+	  <None Remove="Resources\Images\03d.png" />
+	  <None Remove="Resources\Images\03n.png" />
+	  <None Remove="Resources\Images\04d.png" />
+	  <None Remove="Resources\Images\04n.png" />
+	  <None Remove="Resources\Images\09d.png" />
+	  <None Remove="Resources\Images\09n.png" />
+	  <None Remove="Resources\Images\10d.png" />
+	  <None Remove="Resources\Images\10n.png" />
+	  <None Remove="Resources\Images\11d.png" />
+	  <None Remove="Resources\Images\11n.png" />
+	  <None Remove="Resources\Images\13d.png" />
+	  <None Remove="Resources\Images\13n.png" />
+	  <None Remove="Resources\Images\50d.png" />
+	  <None Remove="Resources\Images\50n.png" />
 	  <None Remove="Resources\Splash\partly_cloudy.svg" />
 	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>

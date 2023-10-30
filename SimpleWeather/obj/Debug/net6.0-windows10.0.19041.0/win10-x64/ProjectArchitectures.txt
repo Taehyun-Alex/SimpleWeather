@@ -1,1 +1,1 @@
-C:\Users\20101299\repo\SimpleWeather\SimpleWeather\SimpleWeather.csproj;x64
+C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\SimpleWeather.csproj;x64

@@ -35,5 +35,6 @@ public partial class MainPage : ContentPage
         time_label.Text = result.list[0].currentTime.ToString("hh:mm tt");
         time_label2.Text = result.list[0].currentTime.ToString("dddd\n dd MMM yyyy");
         city_label.Text = result.city.name;
+        initial_weather_icon.Source = result.list[0].weather[0].customIcon;
     }
 }

@@ -63,8 +63,8 @@ namespace SimpleWeather.Models.ApiModels
 
     public class Rain
     {
-        [JsonProperty("3h")]
-        public double _3h { get; set; }
+        [JsonProperty("1h")]
+        public double _1h { get; set; }
     }
 
     public class Root
@@ -87,6 +87,8 @@ namespace SimpleWeather.Models.ApiModels
         public string main { get; set; }
         public string description { get; set; }
         public string icon { get; set; }
+
+        public string customIcon => string.Format("icon_{0}.png", icon);
     }
 
     public class Wind

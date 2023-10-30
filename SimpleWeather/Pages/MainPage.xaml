@@ -21,6 +21,7 @@
                 Grid.Column="6"
                 Grid.Row="0"
                 x:Name="searchButton"
+                Clicked="searchButton_Clicked"
                 />
 
             <Image
@@ -114,11 +115,11 @@
                                     </Label.FormattedText>
                                 </Label>
                                     
-                                <!--<Image
-                                    x:Name="custom_weather_icon"
+                                <Image
+                                    Source="{Binding ImageSource}"
                                     Grid.Row="5"
                                     Grid.Column="2"
-                                    HeightRequest="50"/>-->
+                                    HeightRequest="50"/>
 
                                 <Label Grid.Column="3" VerticalTextAlignment="Center">
                                     <Label.FormattedText>

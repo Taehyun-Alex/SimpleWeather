@@ -20,12 +20,18 @@ public partial class MainPage : ContentPage
         Shell.Current.GoToAsync(nameof(FavouritesPage));
     }
 
+    private void searchButton_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync(nameof(SearchPage));
+    }
+
     protected async override void OnAppearing()
     {
         base.OnAppearing();
         var result = await WeatherAPIService.GetWeatherInformation();
         foreach (var item in result.list)
         {
+            item.ImageSource = item.weather[0].customIcon;
             WeatherList.Add(item);
         }
         CvWeather.ItemsSource = WeatherList;
@@ -37,4 +43,6 @@ public partial class MainPage : ContentPage
         city_label.Text = result.city.name;
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
     }
+
+    
 }

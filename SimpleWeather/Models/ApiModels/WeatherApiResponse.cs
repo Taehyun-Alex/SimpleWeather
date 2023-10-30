@@ -46,6 +46,8 @@ namespace SimpleWeather.Models.ApiModels
         public Sys sys { get; set; }
         public string dt_txt { get; set; }
         public Rain rain { get; set; }
+
+        public string ImageSource { get; set; }
     }
 
     public class Main

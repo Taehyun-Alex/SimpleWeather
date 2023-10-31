@@ -29,7 +29,8 @@
                     VerticalOptions="Start"
                     HorizontalOptions="FillAndExpand"
                     Margin="20,0"
-                    MaximumWidthRequest="300"/>
+                    MaximumWidthRequest="300"
+                    x:Name="searchBar"/>
             </HorizontalStackLayout>
 
             <ImageButton
@@ -57,13 +58,10 @@
                 Grid.ColumnSpan="2"
                 BackgroundColor="LightGray">
 
-                <ScrollView>
-                    <StackLayout>
-                        <Label Text="Perth" />
-                        <Label Text="Peru" />
-                        <Label Text="Pakistan" />
-                    </StackLayout>
-                </ScrollView>
+                <ListView x:Name="cityListView"
+                          ItemTapped="cityListView_ItemTapped">
+                    
+                </ListView>
             </Frame>
         </Grid>
     </Frame>

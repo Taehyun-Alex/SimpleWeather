@@ -2,7 +2,8 @@
 
 public partial class App : Application
 {
-	public App()
+    public static string ApiUrl { get; set; }
+    public App()
 	{
 		InitializeComponent();
 

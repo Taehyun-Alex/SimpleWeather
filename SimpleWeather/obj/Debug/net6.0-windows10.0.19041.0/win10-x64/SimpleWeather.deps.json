@@ -9,11 +9,13 @@
     ".NETCoreApp,Version=v6.0/win10-x64": {
       "SimpleWeather/1.0": {
         "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.1",
           "Microsoft.Maui.Dependencies": "6.0.552",
           "Microsoft.Maui.Extensions": "6.0.552",
           "Microsoft.Windows.SDK.BuildTools": "10.0.22000.194",
           "Newtonsoft.Json": "13.0.3",
           "PCLStorage": "1.0.2",
+          "UtcTimeLibrary": "1.0.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.14",
           "runtimepack.Microsoft.Maui.Core.Runtime.win": "6.0.552",
           "runtimepack.Microsoft.Maui.Controls.Runtime.win": "6.0.552",
@@ -905,6 +907,14 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.2.1": {
+        "runtime": {
+          "lib/net6.0/CommunityToolkit.Mvvm.dll": {
+            "assemblyVersion": "8.2.0.0",
+            "fileVersion": "8.2.1.1"
+          }
+        }
+      },
       "Microsoft.Bcl/1.1.6": {
         "dependencies": {
           "Microsoft.Bcl.Build": "1.0.10"
@@ -1154,7 +1164,15 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "UtcTimeLibrary/1.0.0": {
+        "runtime": {
+          "lib/net6.0/UtcTimeLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -1187,6 +1205,13 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "CommunityToolkit.Mvvm/8.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I24ofWVEdplxYjUez9/bljv/qb8r8Ccj6cvYXHexNBegLaD3iDy3QrzAAOYVMmfGWIXxlU1ZtECQNfU07+6hXQ==",
+      "path": "communitytoolkit.mvvm/8.2.1",
+      "hashPath": "communitytoolkit.mvvm.8.2.1.nupkg.sha512"
     },
     "Microsoft.Bcl/1.1.6": {
       "type": "package",
@@ -1341,6 +1366,13 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "UtcTimeLibrary/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KtUbL4QOHkhHBvODfRiiUxnZVSHuNjOS5C00RtXKmEs35E4uyq4caHVLb+xRqxPN52IbGlIUCuBvbDi474XSHQ==",
+      "path": "utctimelibrary/1.0.0",
+      "hashPath": "utctimelibrary.1.0.0.nupkg.sha512"
     }
   },
   "runtimes": {

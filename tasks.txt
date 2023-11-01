@@ -1,21 +1,21 @@
-search page
+Search page
 
 * from what database will it look for the city?
-is it list of city inside the json file?
-do we look at API documentation?
+Is it the list of cities inside the JSON file?
+Do we look at API documentation?
+*************need Aaron's help*****************
 
-* I need search to be binded with the result in the listview.
 
 * when I click on a city, it should lead back to the updated main page
 (do I do this by replacing the city in the API address?)
 
 favourite page
 
-* from the main page, make tap action to change the icon
+* from the main page, create tap action to change the icon
 
-* from the main page, make double tap action to move to favourite page.
+* from the main page, create double tap action to move to favourite page.
 
-* on favourite page, have city name and its heart icon.
+* on the favourite page, have the city name and its heart icon.
 if a city name is clicked on the listview, direct to the updated main page/
 
 * 

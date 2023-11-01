@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace SimpleWeather.Models.ApiModels
+namespace SimpleWeather.Models.ApiModels //used https://json2csharp.com/ and pasted json to classes
 {
 
     public class City

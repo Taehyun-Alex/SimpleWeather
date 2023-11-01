@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SimpleWeather
 {
-    public class WeatherAPIService
+    public class WeatherAPIService //this class has a method that connects the API and returns json object
     {
 
         public static async Task<Root> GetWeatherInformation()

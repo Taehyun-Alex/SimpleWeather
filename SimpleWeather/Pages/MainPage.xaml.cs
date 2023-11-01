@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
     {
 		Shell.Current.GoToAsync(nameof(SettingPage));
     }
-
+    
     
     private void favButton_Clicked(object sender, EventArgs e)
     {

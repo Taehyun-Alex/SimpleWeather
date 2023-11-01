@@ -7,13 +7,13 @@
         Margin="20"
         CornerRadius="40"
         BackgroundColor="LightGray">
-        
+
         <Grid
             RowDefinitions="0.1*, 0.05*, 0.85*"
             ColumnDefinitions="0.9*, 0.1*">
-            
+
             <HorizontalStackLayout>
-                
+
                 <ImageButton
                     Source="left_arrow.svg"
                     Grid.Row="0"
@@ -22,7 +22,7 @@
                     Margin="20"/>
 
                 <Entry
-                    Placeholder="Suburb, city, country"
+                    Placeholder="Search City"
                     PlaceholderColor="DarkGray"
                     HorizontalTextAlignment="Start"
                     Grid.Row="0"
@@ -30,7 +30,8 @@
                     HorizontalOptions="FillAndExpand"
                     Margin="20,0"
                     MaximumWidthRequest="300"
-                    x:Name="searchBar"/>
+                    x:Name="searchBar"
+                    Text="{Binding SearchQuery, Mode=TwoWay}"/>
             </HorizontalStackLayout>
 
             <ImageButton
@@ -59,8 +60,13 @@
                 BackgroundColor="LightGray">
 
                 <ListView x:Name="cityListView"
-                          ItemTapped="cityListView_ItemTapped">
-                    
+                          ItemTapped="cityListView_ItemTapped"
+                          ItemsSource="{Binding FilteredCityNames}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
             </Frame>
         </Grid>

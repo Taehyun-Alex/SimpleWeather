@@ -3,6 +3,7 @@ namespace SimpleWeather.Pages;
 public partial class MainPage : ContentPage
 {
     public List<Models.ApiModels.List> WeatherList;
+    private string city;
 	public MainPage()
 	{
 		InitializeComponent();
@@ -28,7 +29,12 @@ public partial class MainPage : ContentPage
     protected async override void OnAppearing()
     {
         base.OnAppearing();
-        var result = await WeatherAPIService.GetWeatherInformation();
+        await GetLocationByCity("Perth");
+    }
+
+    public async Task GetLocationByCity(string city)
+    {
+        var result = await WeatherAPIService.GetWeatherInformation(city);
         foreach (var item in result.list)
         {
             item.ImageSource = item.weather[0].customIcon;
@@ -43,6 +49,5 @@ public partial class MainPage : ContentPage
         city_label.Text = result.city.name;
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
     }
-
     
 }

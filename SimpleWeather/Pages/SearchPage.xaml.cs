@@ -82,4 +82,11 @@ public partial class SearchPage : ContentPage
             await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
         }
     }
+
+    private void Tapcity_Tapped(object sender, EventArgs e)
+    {
+
+    }
+
+	
 }

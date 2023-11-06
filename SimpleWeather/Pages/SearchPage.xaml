@@ -68,6 +68,9 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="Tapcity" Tapped="Tapcity_Tapped"/>
+                </Frame.GestureRecognizers>
             </Frame>
         </Grid>
     </Frame>

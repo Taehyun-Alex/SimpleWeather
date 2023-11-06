@@ -8,63 +8,63 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SimpleWeather
-build_property.ProjectDir = C:\Users\SUNGTA.TDM\source\repos\SimpleWeather\SimpleWeather\
+build_property.ProjectDir = C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/App.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/AppShell.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/DarkTheme.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/DarkTheme.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.DarkTheme.xaml
 build_metadata.AdditionalFiles.TargetPath = DarkTheme.xaml
 build_metadata.AdditionalFiles.RelativePath = DarkTheme.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/Pages/FavouritesPage.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/Pages/FavouritesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Pages.FavouritesPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\FavouritesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\FavouritesPage.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/Pages/MainPage.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/Pages/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Pages.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\MainPage.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/Pages/SearchPage.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/Pages/SearchPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Pages.SearchPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\SearchPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\SearchPage.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/Pages/SettingPage.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/Pages/SettingPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Pages.SettingPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\SettingPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\SettingPage.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/Resources/Styles/Colors.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/Resources/Styles/LightTheme.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/Resources/Styles/LightTheme.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Resources.Styles.LightTheme.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\LightTheme.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\LightTheme.xaml
 
-[C:/Users/SUNGTA.TDM/source/repos/SimpleWeather/SimpleWeather/Resources/Styles/Styles.xaml]
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

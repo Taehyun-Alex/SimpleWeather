@@ -2,7 +2,17 @@ namespace SimpleWeather.Pages;
 
 public partial class SearchPage : ContentPage
 {
-	private List<string> cityNames = new List<string> // typed in the list of cities manually for now. Try to connect it to the API city list.
+    private MainPage mainPage;
+
+    public SearchPage(MainPage mainPage)
+    {
+        InitializeComponent();
+        this.mainPage = mainPage; // Store a reference to the MainPage
+        BindingContext = this;
+        FilteredCityNames = cityNames;
+    }
+
+    private List<string> cityNames = new List<string> // typed in the list of cities manually for now. Try to connect it to the API city list.
 	{
 		"London",
 		"Perth",
@@ -72,21 +82,15 @@ public partial class SearchPage : ContentPage
 		Shell.Current.GoToAsync("..");
     }
 
-    private async void cityListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    private void cityListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        if (e.Item is string selectedCity)
+        if (e.Item is object selectedCity)
         {
-            // Update the API address with the selected city name
-            App.ApiUrl = $"https://pro.openweathermap.org/data/2.5/forecast/hourly?q={selectedCity}&appid=59a4ade3192313d407110c1eb429f1a8&units=metric&cnt=10";
-
-            await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+            if (mainPage != null)
+            {
+                mainPage.GetLocationByCity((string)selectedCity);
+                Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+            }
         }
     }
-
-    private void Tapcity_Tapped(object sender, EventArgs e)
-    {
-
-    }
-
-	
 }

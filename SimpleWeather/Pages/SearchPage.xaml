@@ -60,17 +60,14 @@
                 BackgroundColor="LightGray">
 
                 <ListView x:Name="cityListView"
-                          ItemTapped="cityListView_ItemTapped"
-                          ItemsSource="{Binding FilteredCityNames}">
+                          ItemsSource="{Binding FilteredCityNames}"
+                          ItemTapped="cityListView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding}"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer x:Name="Tapcity" Tapped="Tapcity_Tapped"/>
-                </Frame.GestureRecognizers>
             </Frame>
         </Grid>
     </Frame>

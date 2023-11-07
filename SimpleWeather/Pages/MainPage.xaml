@@ -72,14 +72,15 @@
                 x:Name="initial_weather_icon"
                 Grid.Row="2"
                 Grid.Column="3"/>
-            
+
             <ImageButton
                 Source="empty_loveheart.svg"
                 Grid.Column="6"
                 Grid.Row="3"
                 x:Name="favButton"
-                Clicked="favButton_Clicked"/>
-            
+                Clicked="favButton_Clicked">
+            </ImageButton>
+
             <Frame
                 Grid.Row="4"
                 Grid.Column="1"

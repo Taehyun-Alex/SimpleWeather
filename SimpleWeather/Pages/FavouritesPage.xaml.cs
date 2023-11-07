@@ -1,3 +1,4 @@
+
 namespace SimpleWeather.Pages;
 
 public partial class FavouritesPage : ContentPage
@@ -12,14 +13,16 @@ public partial class FavouritesPage : ContentPage
     {
         public string CityName { get; set; }
         public string ImageSource { get; set; }
+
+        public bool IsFavorite { get; set; }
     }
 
-    private List<FavCityItem> favCities = new List<FavCityItem> //manual list of favourite cities.
+    public List<FavCityItem> favCities = new List<FavCityItem> //manual list of favourite cities.
     {
-        new FavCityItem { CityName = "London", ImageSource = "empty_loveheart.png" },
-        new FavCityItem { CityName = "Perth", ImageSource = "empty_loveheart.png" },
-        new FavCityItem { CityName = "Seoul", ImageSource = "empty_loveheart.png" },
-        new FavCityItem { CityName = "Tokyo", ImageSource = "empty_loveheart.png" }
+        new FavCityItem { CityName = "London", ImageSource = "empty_loveheart.png", IsFavorite = false },
+        new FavCityItem { CityName = "Perth", ImageSource = "empty_loveheart.png", IsFavorite = false },
+        new FavCityItem { CityName = "Seoul", ImageSource = "empty_loveheart.png", IsFavorite = false },
+        new FavCityItem { CityName = "Tokyo", ImageSource = "empty_loveheart.png", IsFavorite = false }
     };
 
     private void xButton_Clicked(object sender, EventArgs e)
@@ -27,4 +30,13 @@ public partial class FavouritesPage : ContentPage
         Navigation.PopAsync();
     }
 
+    private void ImageButton_Clicked(object sender, EventArgs e)
+    {
+        //var favCity = favCities.FirstOrDefault(c => c.CityName == "Perth"); // Replace with the city you want to toggle
+        //if (favCity != null)
+        //{
+        //    favCity.IsFavorite = !favCity.IsFavorite;
+        //    favCity.ImageSource = favCity.IsFavorite ? "filled_loveheart.png" : "empty_loveheart.png";
+        //}
+    }
 }

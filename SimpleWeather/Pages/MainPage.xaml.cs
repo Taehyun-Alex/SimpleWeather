@@ -1,3 +1,5 @@
+
+
 namespace SimpleWeather.Pages;
 
 public partial class MainPage : ContentPage
@@ -5,11 +7,12 @@ public partial class MainPage : ContentPage
     public List<Models.ApiModels.List> WeatherList;
     private string city;
     private bool isCitySet = false; //set this boolean to see if the city has been set.
+
     public MainPage()
 	{
 		InitializeComponent();
         WeatherList = new List<Models.ApiModels.List>();
-	}
+    }
 
     private void menuButton_Clicked(object sender, EventArgs e)
     {
@@ -20,7 +23,14 @@ public partial class MainPage : ContentPage
     
     private void favButton_Clicked(object sender, EventArgs e)
     {
+       
         FavouritesPage favPage = new FavouritesPage();
+        //var favCity = favPage.favCities.FirstOrDefault(c => c.CityName == "Perth"); // Replace with the city you want to toggle
+        //if (favCity != null)
+        //{
+        //    favCity.IsFavorite = !favCity.IsFavorite;
+        //    favCity.ImageSource = favCity.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
+        //}
         Navigation.PushAsync(favPage);
     }
 

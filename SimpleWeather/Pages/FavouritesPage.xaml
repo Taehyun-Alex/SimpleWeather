@@ -33,7 +33,7 @@
                     <DataTemplate>
                         <Grid ColumnDefinitions="0.8*, 0.2*">
                             <Label Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center" />
-                            <Image Grid.Column="1" Source="{Binding ImageSource}" />
+                            <ImageButton Grid.Column="1" Source="{Binding ImageSource}" Clicked="ImageButton_Clicked" />
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

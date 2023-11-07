@@ -9,6 +9,6 @@ public partial class FavouritesPage : ContentPage
 
     private void xButton_Clicked(object sender, EventArgs e)
     {
-		Shell.Current.GoToAsync("..");
+        Navigation.PopAsync();
     }
 }

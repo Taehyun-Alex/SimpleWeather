@@ -4,6 +4,7 @@ public partial class SearchPage : ContentPage
 {
     private MainPage mainPage;
 
+    
     public SearchPage(MainPage mainPage)
     {
         InitializeComponent();
@@ -63,12 +64,7 @@ public partial class SearchPage : ContentPage
 			}
 		}
 	}
-	public SearchPage() //constructor for searchpage
-	{
-		InitializeComponent();
-        BindingContext = this; // Set the ViewModel as the binding context. Without this, the search will not work properly.
-        FilteredCityNames = cityNames;
-	}
+	
 
     private void FilterCityNames() // got it from chatgpt, try to understand it.
     {
@@ -79,17 +75,19 @@ public partial class SearchPage : ContentPage
 
     private void gobackButton_Clicked(object sender, EventArgs e)
     {
-		Shell.Current.GoToAsync("..");
+        Navigation.PopAsync();
     }
 
-    private void cityListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    private async void cityListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
         if (e.Item is object selectedCity)
         {
             if (mainPage != null)
             {
-                mainPage.GetLocationByCity((string)selectedCity);
-                Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+                await mainPage.GetLocationByCity((string)selectedCity);
+
+                // Navigate back to MainPage
+                await Navigation.PopAsync();
             }
         }
     }

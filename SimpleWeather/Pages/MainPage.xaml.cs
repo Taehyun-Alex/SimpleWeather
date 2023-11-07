@@ -4,7 +4,8 @@ public partial class MainPage : ContentPage
 {
     public List<Models.ApiModels.List> WeatherList;
     private string city;
-	public MainPage()
+    private bool isCitySet = false; //set this boolean to see if the city has been set.
+    public MainPage()
 	{
 		InitializeComponent();
         WeatherList = new List<Models.ApiModels.List>();
@@ -12,28 +13,37 @@ public partial class MainPage : ContentPage
 
     private void menuButton_Clicked(object sender, EventArgs e)
     {
-		Shell.Current.GoToAsync(nameof(SettingPage));
+        SettingPage settingPage = new SettingPage();
+        Navigation.PushAsync(settingPage);
     }
     
     
     private void favButton_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(FavouritesPage));
+        FavouritesPage favPage = new FavouritesPage();
+        Navigation.PushAsync(favPage);
     }
 
     private void searchButton_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(SearchPage));
+        SearchPage searchPage = new SearchPage(this);
+        Navigation.PushAsync(searchPage);
     }
 
     protected async override void OnAppearing()
     {
         base.OnAppearing();
-        await GetLocationByCity("Perth");
+
+        if (!isCitySet) // if the city has not set yet, the default will be Perth.
+        {
+            await GetLocationByCity("Perth");
+            isCitySet = true; // Mark the city as set
+        }
     }
 
     public async Task GetLocationByCity(string city)
     {
+        this.city = city;
         var result = await WeatherAPIService.GetWeatherInformation(city);
         foreach (var item in result.list)
         {

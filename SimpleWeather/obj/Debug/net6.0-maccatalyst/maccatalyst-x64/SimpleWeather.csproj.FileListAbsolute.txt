@@ -1055,6 +1055,3 @@ C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-maccata
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\SimpleWeather.AssemblyInfoInputs.cache
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\SimpleWeather.AssemblyInfo.cs
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\SimpleWeather.csproj.CoreCompileInputs.cache
-C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\SimpleWeather.dll
-C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\refint\SimpleWeather.dll
-C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\SimpleWeather.pdb

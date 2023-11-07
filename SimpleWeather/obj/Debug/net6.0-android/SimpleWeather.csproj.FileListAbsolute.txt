@@ -4310,8 +4310,6 @@ C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.AssemblyInfoInputs.cache
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.AssemblyInfo.cs
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.csproj.CoreCompileInputs.cache
-C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.dll
-C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.pdb
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\bin\Debug\net6.0-android\SimpleWeather.runtimeconfig.json
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\bin\Debug\net6.0-android\SimpleWeather.dll
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\bin\Debug\net6.0-android\SimpleWeather.pdb
@@ -4321,6 +4319,8 @@ C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\bin\Debug\net6.0-android
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\bin\Debug\net6.0-android\com.companyname.simpleweather-Signed.apk
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\bin\Debug\net6.0-android\com.companyname.simpleweather-Signed.apk.idsig
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\XamlC.stamp
+C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.dll
+C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.pdb
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.genruntimeconfig.cache
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\SimpleWeather.runtimeconfig.json.bin
 C:\Users\Admin\source\repos\SimpleWeather\SimpleWeather\obj\Debug\net6.0-android\android\bin\com.companyname.simpleweather.apk

@@ -45,11 +45,13 @@ public partial class MainPage : ContentPage
     {
         this.city = city;
         var result = await WeatherAPIService.GetWeatherInformation(city);
+        WeatherList.Clear();
         foreach (var item in result.list)
         {
             item.ImageSource = item.weather[0].customIcon;
             WeatherList.Add(item);
         }
+        CvWeather.ItemsSource = null;
         CvWeather.ItemsSource = WeatherList;
 
         temp_label.Text = Math.Round(result.list[0].main.temp).ToString() + "°C";
@@ -58,6 +60,14 @@ public partial class MainPage : ContentPage
         time_label2.Text = result.list[0].currentTime.ToString("dddd\n dd MMM yyyy");
         city_label.Text = result.city.name;
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
+
+    }
+
+    public void UpdateListView(List<Models.ApiModels.List> newWeatherData)
+    {
+        WeatherList.Clear();
+        WeatherList.AddRange(newWeatherData);
+        CvWeather.ItemsSource = WeatherList;
     }
     
 }

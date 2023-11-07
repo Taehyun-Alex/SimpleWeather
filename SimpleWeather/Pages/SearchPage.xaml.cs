@@ -85,7 +85,6 @@ public partial class SearchPage : ContentPage
             if (mainPage != null)
             {
                 await mainPage.GetLocationByCity((string)selectedCity);
-
                 // Navigate back to MainPage
                 await Navigation.PopAsync();
             }

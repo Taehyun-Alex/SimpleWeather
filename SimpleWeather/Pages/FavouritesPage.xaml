@@ -23,45 +23,21 @@
             Grid.Row="1"
             CornerRadius="40"
             BackgroundColor="LightGray">
-            
-            <ScrollView>
-                
-                <Grid
-                    RowDefinitions="auto, auto, auto"
-                    ColumnDefinitions="auto, auto">
-                    
-                    <Label 
-                        Text="Perth" 
-                        Grid.Row="0" 
-                        Grid.Column="0"/>
-                    
-                    <ImageButton 
-                        Source="empty_loveheart.svg" 
-                        Grid.Row="0" 
-                        Grid.Column="1"/>
 
-                    <Label
-                        Text="Peru"
-                        Grid.Row="1"
-                        Grid.Column="0"/>
-                    
-                    <ImageButton 
-                        Source="empty_loveheart.svg"
-                        Grid.Row="1"
-                        Grid.Column="1"/>
-
-                    <Label
-                        Text="Pakistan"
-                        Grid.Row="2"
-                        Grid.Column="0"/>
-                    
-                    <ImageButton
-                        Source="empty_loveheart.svg"
-                        Grid.Row="2"
-                        Grid.Column="1"/>
-                    
-                </Grid>
-            </ScrollView>
+            <CollectionView x:Name="favCityView">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="20" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="0.8*, 0.2*">
+                            <Label Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center" />
+                            <Image Grid.Column="1" Source="{Binding ImageSource}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Frame>
     </Grid>
 </ContentPage>

@@ -63,11 +63,4 @@ public partial class MainPage : ContentPage
 
     }
 
-    public void UpdateListView(List<Models.ApiModels.List> newWeatherData)
-    {
-        WeatherList.Clear();
-        WeatherList.AddRange(newWeatherData);
-        CvWeather.ItemsSource = WeatherList;
-    }
-    
 }

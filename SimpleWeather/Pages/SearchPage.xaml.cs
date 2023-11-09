@@ -6,7 +6,6 @@ public partial class SearchPage : ContentPage
 {
     private MainPage mainPage;
 
-    
     public SearchPage(MainPage mainPage)
     {
         InitializeComponent();
@@ -15,7 +14,7 @@ public partial class SearchPage : ContentPage
         FilteredCityNames = cityNames;
     }
 
-    private List<string> cityNames = CityData.CityNames; // calling the reusable city list from CityData class.
+    private List<string> cityNames = CityData.FavCityNames; // calling the reusable city list from CityData class.
 
 
     private string searchQuery;

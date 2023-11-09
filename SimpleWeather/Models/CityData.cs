@@ -10,30 +10,6 @@ namespace SimpleWeather.Models
 {
     public static class CityData
     {
-        public static List<string> CityNames { get; } = new List<string>
-        {
-        "London",
-        "Perth",
-        "Seoul",
-        "Tokyo",
-        "Rio de Janeiro",
-        "Toronto",
-        "Santiago",
-        "Shanghai",
-        "Cairo",
-        "Delhi",
-        "Paris",
-        "Jakarta",
-        "Tehran",
-        "Osaka",
-        "Kuala Lumpur",
-        "Lagos",
-        "Manila",
-        "Madrid",
-        "Bangkok",
-        "New York"
-        };
-
         public class FavCityItem :INotifyPropertyChanged //create a class with properties so we can bind it to xaml colletionview.
         {
             private string cityName;
@@ -87,12 +63,31 @@ namespace SimpleWeather.Models
             }
         }
 
-        public static List<FavCityItem> FavCities { get; } = new List<FavCityItem>
+        public static List<FavCityItem> FavCities { get; } = new List<FavCityItem> //manual list of cities with boolean value
         {
             new FavCityItem { CityName = "London", ImageSource = "empty_loveheart.png", IsFavorite = false },
             new FavCityItem { CityName = "Perth", ImageSource = "empty_loveheart.png", IsFavorite = false },
             new FavCityItem { CityName = "Seoul", ImageSource = "empty_loveheart.png", IsFavorite = false },
-            new FavCityItem { CityName = "Tokyo", ImageSource = "empty_loveheart.png", IsFavorite = false }
+            new FavCityItem { CityName = "Tokyo", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Rio de Janeiro", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Toronto", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Santiago", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Cairo", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Delhi", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Paris", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Jakarta", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Tehran", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Osaka", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Kuala Lumpur", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Lagos", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Manila", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Madrid", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Bangkok", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Makassar", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Incheon", ImageSource = "empty_loveheart.png", IsFavorite = false },
+
         };
+
+        public static List<string> FavCityNames => FavCities.Select(favCity => favCity.CityName).ToList(); //using the list above, extract a list of city names.
     }
 }

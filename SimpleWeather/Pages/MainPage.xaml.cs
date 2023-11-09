@@ -23,7 +23,7 @@ public partial class MainPage : ContentPage
     
     private void favButton_Clicked(object sender, EventArgs e)
     {
-        var cityNameToToggle = "Perth"; // Replace with the city you want to toggle
+        var cityNameToToggle = city_label.Text; // Replace with the city you want to toggle
 
         // Find the city in the favorite cities list based on the cityNameToToggle
         var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == cityNameToToggle);
@@ -54,6 +54,16 @@ public partial class MainPage : ContentPage
         {
             await GetLocationByCity("Perth");
             isCitySet = true; // Mark the city as set
+        }
+
+        //OnAppearing, it looks at the city name on the mainpage, and checks for its boolean value.
+       //and according to its boolean value, it sets the source of the imagebutton(favButton)
+        var cityName = city_label.Text;
+        var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == cityName);
+
+        if (favCity != null)
+        {
+            favButton.Source = favCity.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
         }
     }
 

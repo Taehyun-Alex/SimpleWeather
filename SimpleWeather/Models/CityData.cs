@@ -33,6 +33,7 @@ namespace SimpleWeather.Models
         "Bangkok",
         "New York"
         };
+
         public class FavCityItem :INotifyPropertyChanged //create a class with properties so we can bind it to xaml colletionview.
         {
             private string cityName;
@@ -92,7 +93,6 @@ namespace SimpleWeather.Models
             new FavCityItem { CityName = "Perth", ImageSource = "empty_loveheart.png", IsFavorite = false },
             new FavCityItem { CityName = "Seoul", ImageSource = "empty_loveheart.png", IsFavorite = false },
             new FavCityItem { CityName = "Tokyo", ImageSource = "empty_loveheart.png", IsFavorite = false }
-            // Add more favorite cities here
         };
     }
 }

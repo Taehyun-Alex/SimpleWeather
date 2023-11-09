@@ -1,4 +1,4 @@
-
+using SimpleWeather.Models;
 
 namespace SimpleWeather.Pages;
 
@@ -23,14 +23,20 @@ public partial class MainPage : ContentPage
     
     private void favButton_Clicked(object sender, EventArgs e)
     {
-       
+        var cityNameToToggle = "Perth"; // Replace with the city you want to toggle
+
+        // Find the city in the favorite cities list based on the cityNameToToggle
+        var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == cityNameToToggle);
+
+        if (favCity != null)
+        {
+            favCity.IsFavorite = !favCity.IsFavorite;
+
+            // Update the source of the favButton based on the boolean value
+            favButton.Source = favCity.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
+        }
+
         FavouritesPage favPage = new FavouritesPage();
-        //var favCity = favPage.favCities.FirstOrDefault(c => c.CityName == "Perth"); // Replace with the city you want to toggle
-        //if (favCity != null)
-        //{
-        //    favCity.IsFavorite = !favCity.IsFavorite;
-        //    favCity.ImageSource = favCity.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
-        //}
         Navigation.PushAsync(favPage);
     }
 

@@ -1,3 +1,5 @@
+using SimpleWeather.Models;
+
 namespace SimpleWeather.Pages;
 
 public partial class SearchPage : ContentPage
@@ -13,31 +15,10 @@ public partial class SearchPage : ContentPage
         FilteredCityNames = cityNames;
     }
 
-    private List<string> cityNames = new List<string> // typed in the list of cities manually for now. Try to connect it to the API city list.
-	{
-		"London",
-		"Perth",
-		"Seoul",
-		"Tokyo",
-		"Rio de Janeiro",
-		"Toronto",
-		"Santiago", 
-		"Shanghai",
-		"Cairo",
-		"Delhi",
-		"Paris",
-		"Jakarta",
-		"Tehran",
-		"Osaka",
-		"Kuala Lumpur",
-		"Lagos",
-		"Manila",
-		"Madrid",
-		"Bangkok",
-		"New York"
-	};
+    private List<string> cityNames = CityData.CityNames; // calling the reusable city list from CityData class.
 
-	private string searchQuery;
+
+    private string searchQuery;
 	public string SearchQuery
 	{
 		get { return searchQuery;}
@@ -80,14 +61,25 @@ public partial class SearchPage : ContentPage
 
     private async void cityListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        if (e.Item is object selectedCity)
+        if (e.Item is string selectedCityName)
         {
-            if (mainPage != null)
+            var selectedCity = CityData.FavCities.FirstOrDefault(c => c.CityName == selectedCityName);
+
+            if (mainPage != null && selectedCity != null)
             {
-                await mainPage.GetLocationByCity((string)selectedCity);
+                await mainPage.GetLocationByCity(selectedCity);
                 // Navigate back to MainPage
                 await Navigation.PopAsync();
             }
         }
+        //if (e.Item is object selectedCity)
+        //{
+        //    if (mainPage != null)
+        //    {
+        //        await mainPage.GetLocationByCity((string)selectedCity);
+        //        // Navigate back to MainPage
+        //        await Navigation.PopAsync();
+        //    }
+        //}
     }
 }

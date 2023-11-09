@@ -33,7 +33,16 @@
                     <DataTemplate>
                         <Grid ColumnDefinitions="0.8*, 0.2*">
                             <Label Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center" />
-                            <ImageButton Grid.Column="1" Source="{Binding ImageSource}" Clicked="ImageButton_Clicked" />
+                            <ImageButton Grid.Column="1" x:Name="imageButton" Clicked="ImageButton_Clicked" >
+                                <ImageButton.Triggers>
+                                    <DataTrigger TargetType="ImageButton" Binding="{Binding IsFavorite}" Value="True">
+                                        <Setter Property="Source" Value="full_loveheart.svg" />
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="ImageButton" Binding="{Binding IsFavorite}" Value="False">
+                                        <Setter Property="Source" Value="empty_loveheart.svg" />
+                                    </DataTrigger>
+                                </ImageButton.Triggers>
+                            </ImageButton>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

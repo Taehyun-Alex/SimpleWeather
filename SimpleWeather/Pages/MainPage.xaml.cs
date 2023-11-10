@@ -89,4 +89,9 @@ public partial class MainPage : ContentPage
 
     }
 
+    private async void refreshview_Refreshing(object sender, EventArgs e)
+    {
+        await GetLocationByCity(city_label.Text);
+        refreshview.IsRefreshing = false;
+    }
 }

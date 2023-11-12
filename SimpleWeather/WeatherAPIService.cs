@@ -18,6 +18,13 @@ namespace SimpleWeather
             var response = await httpClient.GetStringAsync(string.Format("https://pro.openweathermap.org/data/2.5/forecast/hourly?q={0}&appid=59a4ade3192313d407110c1eb429f1a8&units=metric&cnt=10", city));
             return JsonConvert.DeserializeObject<Root>(response);
         }
-        
+
+        public static async Task<Root> GetWeatherInformationInFahrenheit(string city)
+        {
+            var httpClient = new HttpClient();
+            var response = await httpClient.GetStringAsync(string.Format("https://pro.openweathermap.org/data/2.5/forecast/hourly?q={0}&appid=59a4ade3192313d407110c1eb429f1a8&units=imperial&cnt=10", city));
+            return JsonConvert.DeserializeObject<Root>(response);
+        }
+
     }
 }

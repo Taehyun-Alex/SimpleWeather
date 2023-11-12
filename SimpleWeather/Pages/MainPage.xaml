@@ -12,9 +12,9 @@
 
 
                 <Grid
-            ColumnDefinitions="30, *, *, *, 30"
-            RowDefinitions="0.1*, 0.1*, 0.1*, 0.1*, 0.6*"
-            Margin="20">
+                ColumnDefinitions="30, *, *, *, 30"
+                RowDefinitions="0.1*, 0.1*, 0.1*, 0.1*, 0.6*"
+                Margin="20">
 
                 <ImageButton
                 Source="menu.svg" x:Name="menuButton" Clicked="menuButton_Clicked"/>

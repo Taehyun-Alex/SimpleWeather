@@ -4,5 +4,10 @@
         <name>SimpleWeather</name>
     </assembly>
     <members>
+        <member name="M:SimpleWeather.Pages.MainPage.refreshview_Refreshing(System.Object,System.EventArgs)">
+            <summary>
+            For refreshview property in xaml file
+            </summary>
+        </member>
     </members>
 </doc>

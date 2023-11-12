@@ -5,8 +5,10 @@ namespace SimpleWeather.Pages;
 public partial class MainPage : ContentPage
 {
     public List<Models.ApiModels.List> WeatherList;
-    private string city;
+    public string city;
     private bool isCitySet = false; //set this boolean to see if the city has been set.
+    private bool isSwitchToggled;
+
 
     public MainPage()
 	{
@@ -14,9 +16,14 @@ public partial class MainPage : ContentPage
         WeatherList = new List<Models.ApiModels.List>();
     }
 
+    public MainPage(bool isSwitchToggled)
+    {
+        this.isSwitchToggled = isSwitchToggled;
+    }
+
     private void menuButton_Clicked(object sender, EventArgs e)
     {
-        SettingPage settingPage = new SettingPage();
+        SettingPage settingPage = new SettingPage(this);
         Navigation.PushAsync(settingPage);
     }
     
@@ -87,11 +94,47 @@ public partial class MainPage : ContentPage
         city_label.Text = result.city.name;
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
 
+
     }
 
+    public async Task GetLocationByCityInFahrenheit(string city)
+    {
+        this.city = city;
+        var result = await WeatherAPIService.GetWeatherInformationInFahrenheit(city);
+        WeatherList.Clear();
+        foreach (var item in result.list)
+        {
+            item.ImageSource = item.weather[0].customIcon;
+            WeatherList.Add(item);
+        }
+        CvWeather.ItemsSource = null;
+        CvWeather.ItemsSource = WeatherList;
+
+        temp_label.Text = Math.Round(result.list[0].main.temp).ToString() + "°F";
+        humid_label.Text = result.list[0].main.humidity.ToString() + "% humid";
+        time_label.Text = result.list[0].currentTime.ToString("hh:mm tt");
+        time_label2.Text = result.list[0].currentTime.ToString("dddd\n dd MMM yyyy");
+        city_label.Text = result.city.name;
+        initial_weather_icon.Source = result.list[0].weather[0].customIcon;
+
+
+    }
+    /// <summary>
+    /// For refreshview property in xaml file
+    /// </summary>
     private async void refreshview_Refreshing(object sender, EventArgs e)
     {
-        await GetLocationByCity(city_label.Text);
+        if (isSwitchToggled)
+        {
+            // The switch is toggled, use Celsius
+            await GetLocationByCity(city_label.Text);
+        }
+        else
+        {
+            // The switch is not toggled, use Fahrenheit
+            await GetLocationByCityInFahrenheit(city_label.Text);
+        }
+
         refreshview.IsRefreshing = false;
     }
 }

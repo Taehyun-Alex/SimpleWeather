@@ -7,6 +7,11 @@
         RowDefinitions="0.1*, 0.45*, 0.05*, 0.35*, 0.05*"
         Margin="20">
         
+        <ActivityIndicator x:Name="activityIndicator"
+                           IsRunning="False"
+                           Color="Purple"
+                           IsVisible="False"/>
+        
         <Label
             Text="Weather Settings"
             HorizontalTextAlignment="Start"
@@ -41,7 +46,9 @@
                 <Switch IsToggled="True"
                         Grid.Column="2"
                         OnColor="AliceBlue"
-                        ThumbColor="Black"/>
+                        ThumbColor="Black"
+                        x:Name="unitSwitch"
+                        Toggled="unitSwitch_Toggled"/>
 
                 <Label
                     Text="Auto Refresh (Every 1min)"
@@ -51,11 +58,13 @@
                     Margin="20"
                     VerticalTextAlignment="Center"/>
 
-                <Switch IsToggled="True"
+                <Switch IsToggled="False"
                         Grid.Row="1"
                         Grid.Column="2"
                         OnColor="AliceBlue"
-                        ThumbColor="Black"/>
+                        ThumbColor="Black"
+                        x:Name="autoRefreshSwitch"
+                        Toggled="autoRefreshSwitch_Toggled"/>
 
                 <Label
                     Text="Notifications"
@@ -65,11 +74,13 @@
                     Margin="20"
                     VerticalTextAlignment="Center"/>
 
-                <Switch IsToggled="True"
+                <Switch IsToggled="False"
                         Grid.Row="2"
                         Grid.Column="2"
                         OnColor="AliceBlue"
-                        ThumbColor="Black"/>
+                        ThumbColor="Black"
+                        x:Name="notificationSwitch"
+                        Toggled="notificationSwitch_Toggled"/>
 
                 <Label Text="Dark mode"
                        Grid.Row="3"
@@ -78,11 +89,13 @@
                        Margin="20"
                        VerticalTextAlignment="Center"/>
 
-                <Switch IsToggled="True"
+                <Switch IsToggled="False"
                         Grid.Row="3"
                         Grid.Column="2"
                         OnColor="AliceBlue"
-                        ThumbColor="Black"/>
+                        ThumbColor="Black"
+                        x:Name="darkModeSwitch"
+                        Toggled="darkModeSwitch_Toggled"/>
             </Grid>
         </Frame>
 

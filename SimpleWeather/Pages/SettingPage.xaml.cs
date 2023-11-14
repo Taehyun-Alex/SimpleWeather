@@ -4,16 +4,27 @@ public partial class SettingPage : ContentPage
 {
     private MainPage mainPage;
 
+
     public SettingPage(MainPage mainPage)
 	{
 		InitializeComponent();
         this.mainPage = mainPage;
-	}
+    }
+
 
     private void xButton_Clicked(object sender, EventArgs e)
     {
         Navigation.PopAsync();
     }
+
+    //protected override void OnAppearing()
+    //{
+    //    base.OnAppearing();
+    //    if (mainPage.isFahrenheitLoaded)
+    //    {
+    //        unitSwitch.IsToggled = false;
+    //    }
+    //}
 
     private async void unitSwitch_Toggled(object sender, ToggledEventArgs e)
     {
@@ -26,6 +37,7 @@ public partial class SettingPage : ContentPage
             // The async task
             bool isSwitchToggled = e.Value;
             await mainPage.GetLocationByCityInFahrenheit(mainPage.city);
+            Preferences.Set("IsSwitchToggled", isSwitchToggled);
             await Navigation.PopAsync();
         }
 

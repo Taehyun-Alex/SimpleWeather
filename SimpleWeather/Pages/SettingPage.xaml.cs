@@ -9,7 +9,11 @@ public partial class SettingPage : ContentPage
 	{
 		InitializeComponent();
         this.mainPage = mainPage;
+        bool savedValue = Preferences.Get("UnitSwitchValue", true);
+        unitSwitch.IsToggled = savedValue;
+        Preferences.Set("UnitSwitchValue", savedValue);
     }
+
 
 
     private void xButton_Clicked(object sender, EventArgs e)
@@ -17,14 +21,6 @@ public partial class SettingPage : ContentPage
         Navigation.PopAsync();
     }
 
-    //protected override void OnAppearing()
-    //{
-    //    base.OnAppearing();
-    //    if (mainPage.isFahrenheitLoaded)
-    //    {
-    //        unitSwitch.IsToggled = false;
-    //    }
-    //}
 
     private async void unitSwitch_Toggled(object sender, ToggledEventArgs e)
     {
@@ -33,14 +29,18 @@ public partial class SettingPage : ContentPage
             // Show the loading indicator
             activityIndicator.IsRunning = true;
             activityIndicator.IsVisible = true;
-
-            // The async task
-            bool isSwitchToggled = e.Value;
-            await mainPage.GetLocationByCityInFahrenheit(mainPage.city);
-            Preferences.Set("IsSwitchToggled", isSwitchToggled);
-            await Navigation.PopAsync();
-        }
-
+                if (e.Value == false)
+                {
+                    // The async task
+                    await mainPage.GetLocationByCityInFahrenheit(mainPage.city);
+                }
+                else
+                {
+                    // The async task
+                    await mainPage.GetLocationByCity(mainPage.city);
+                }
+                Preferences.Set("UnitSwitchValue", e.Value);
+            }
         finally
         {
             // Hide the loading indicator

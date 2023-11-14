@@ -7,19 +7,12 @@ public partial class MainPage : ContentPage
     public List<Models.ApiModels.List> WeatherList;
     public string city;
     private bool isCitySet = false; //set this boolean to see if the city has been set.
-    private bool isSwitchToggled;
-    public bool isFahrenheitLoaded = false;
 
 
     public MainPage()
 	{
 		InitializeComponent();
         WeatherList = new List<Models.ApiModels.List>();
-    }
-
-    public MainPage(bool isSwitchToggled)
-    {
-        this.isSwitchToggled = isSwitchToggled;
     }
 
     private void menuButton_Clicked(object sender, EventArgs e)
@@ -118,24 +111,23 @@ public partial class MainPage : ContentPage
         city_label.Text = result.city.name;
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
 
-        isFahrenheitLoaded = true;
     }
     /// <summary>
     /// For refreshview property in xaml file
     /// </summary>
     private async void refreshview_Refreshing(object sender, EventArgs e)
     {
-        if (!isSwitchToggled)
-        {
-            // The switch is toggled, use Celsius
-            await GetLocationByCity(city);
-        }
-        else
-        {
-            // The switch is not toggled, use Fahrenheit
-            await GetLocationByCityInFahrenheit(city);
-        }
+        //if (true) // fix this
+        //{
+        //    // The switch is toggled, use Celsius
+        //    await GetLocationByCity(city);
+        //}
+        //else
+        //{
+        //    // The switch is not toggled, use Fahrenheit
+        //    await GetLocationByCityInFahrenheit(city);
+        //}
 
-        refreshview.IsRefreshing = false;
+        //refreshview.IsRefreshing = false;
     }
 }

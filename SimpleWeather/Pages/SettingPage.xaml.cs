@@ -12,6 +12,10 @@ public partial class SettingPage : ContentPage
         bool savedValue = Preferences.Get("UnitSwitchValue", true);
         unitSwitch.IsToggled = savedValue;
         Preferences.Set("UnitSwitchValue", savedValue);
+
+        bool autoRefreshValue = Preferences.Get("AutoRefreshSwitchValue", true);
+        autoRefreshSwitch.IsToggled = autoRefreshValue;
+        Preferences.Set("AutoRefreshSwitchValue", autoRefreshValue);
     }
 
 
@@ -52,7 +56,8 @@ public partial class SettingPage : ContentPage
 
     private void autoRefreshSwitch_Toggled(object sender, ToggledEventArgs e)
     {
-
+        mainPage.HandleAutoRefresh(e.Value);
+        Preferences.Set("AutoRefreshSwitchValue", e.Value);
     }
 
     private void notificationSwitch_Toggled(object sender, ToggledEventArgs e)

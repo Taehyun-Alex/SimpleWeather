@@ -1,4 +1,5 @@
 using SimpleWeather.Models;
+using System.Timers;
 
 namespace SimpleWeather.Pages;
 
@@ -7,12 +8,19 @@ public partial class MainPage : ContentPage
     public List<Models.ApiModels.List> WeatherList;
     public string city;
     private bool isCitySet = false; //set this boolean to see if the city has been set.
+    private readonly System.Timers.Timer timer; 
+    private bool isAutoRefreshEnabled;
 
-
+    [Obsolete]
     public MainPage()
 	{
 		InitializeComponent();
         WeatherList = new List<Models.ApiModels.List>();
+
+        timer = new System.Timers.Timer(10000); // set up the timer for 10seconds for autoreloading the mainpage.
+        timer.Elapsed += TimerElapsed;
+
+        isAutoRefreshEnabled = Preferences.Get("AutoRefreshSwitchValue", true); //bring the switch value from settingpage.
     }
 
     private void menuButton_Clicked(object sender, EventArgs e)
@@ -59,13 +67,28 @@ public partial class MainPage : ContentPage
 
         //OnAppearing, it looks at the city name on the mainpage, and checks for its boolean value.
        //and according to its boolean value, it sets the source of the imagebutton(favButton)
-        var cityName = city_label.Text;
-        var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == cityName);
+        var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == city);
 
         if (favCity != null)
         {
             favButton.Source = favCity.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
         }
+
+        if (isAutoRefreshEnabled)
+        {
+            timer.Start();
+        }
+
+        else
+        {
+            timer.Stop();
+        }
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        timer.Stop(); // so when we go to different page, timer stops.
     }
 
     public async Task GetLocationByCity(string city)
@@ -112,22 +135,64 @@ public partial class MainPage : ContentPage
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
 
     }
+
+    private async Task RefreshWeatherData()
+    {
+        bool unitSwitchValue = Preferences.Get("UnitSwitchValue", true);
+        if (unitSwitchValue) // fix this
+        {
+            // The switch is toggled, use Celsius
+            await GetLocationByCity(city);
+        }
+        else
+        {
+            // The switch is not toggled, use Fahrenheit
+            await GetLocationByCityInFahrenheit(city);
+        }
+
+        refreshview.IsRefreshing = false;
+    }
+
     /// <summary>
     /// For refreshview property in xaml file
     /// </summary>
     private async void refreshview_Refreshing(object sender, EventArgs e)
     {
-        //if (true) // fix this
-        //{
-        //    // The switch is toggled, use Celsius
-        //    await GetLocationByCity(city);
-        //}
-        //else
-        //{
-        //    // The switch is not toggled, use Fahrenheit
-        //    await GetLocationByCityInFahrenheit(city);
-        //}
+        await RefreshWeatherData();
+   }
 
-        //refreshview.IsRefreshing = false;
+    [Obsolete]
+    private void TimerElapsed(object sender, ElapsedEventArgs e)
+    {
+
+        Device.BeginInvokeOnMainThread(async () =>
+        {
+            // Trigger the data refresh
+            await RefreshWeatherData();
+        });
+    }
+
+    public void HandleAutoRefresh(bool isAutoRefreshEnabled)
+    {
+        this.isAutoRefreshEnabled = isAutoRefreshEnabled;
+
+        if (isAutoRefreshEnabled)
+        {
+            StartAutoRefresh();
+        }
+        else
+        {
+            StopAutoRefresh();
+        }
+    }
+
+    private void StartAutoRefresh()
+    {
+        timer.Start();
+    }
+
+    private void StopAutoRefresh()
+    {
+        timer.Stop();
     }
 }

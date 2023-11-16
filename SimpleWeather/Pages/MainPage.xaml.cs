@@ -110,8 +110,6 @@ public partial class MainPage : ContentPage
         time_label2.Text = result.list[0].currentTime.ToString("dddd\n dd MMM yyyy");
         city_label.Text = result.city.name;
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
-
-
     }
 
     public async Task GetLocationByCityInFahrenheit(string city)
@@ -133,9 +131,11 @@ public partial class MainPage : ContentPage
         time_label2.Text = result.list[0].currentTime.ToString("dddd\n dd MMM yyyy");
         city_label.Text = result.city.name;
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
-
     }
 
+    /// <summary>
+    /// reusable async method
+    /// </summary>
     private async Task RefreshWeatherData()
     {
         bool unitSwitchValue = Preferences.Get("UnitSwitchValue", true);
@@ -159,10 +159,13 @@ public partial class MainPage : ContentPage
     private async void refreshview_Refreshing(object sender, EventArgs e)
     {
         await RefreshWeatherData();
-   }
+    }
 
+    /// <summary>
+    /// if the timer reaches the time, it performs the action.
+    /// </summary>
     [Obsolete]
-    private void TimerElapsed(object sender, ElapsedEventArgs e)
+    private void TimerElapsed(object sender, ElapsedEventArgs e) 
     {
 
         Device.BeginInvokeOnMainThread(async () =>
@@ -172,6 +175,10 @@ public partial class MainPage : ContentPage
         });
     }
 
+    /// <summary>
+    /// using the switch value from the setting page, it determines whether to refresh.
+    /// </summary>
+    /// <param name="isAutoRefreshEnabled"></param>
     public void HandleAutoRefresh(bool isAutoRefreshEnabled)
     {
         this.isAutoRefreshEnabled = isAutoRefreshEnabled;

@@ -86,6 +86,10 @@
             "UtcTimeLibrary": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.0, )"
             }
           },
           "imports": [
@@ -209,6 +213,10 @@
             "UtcTimeLibrary": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.0, )"
             }
           },
           "imports": [
@@ -308,6 +316,10 @@
             "UtcTimeLibrary": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.0, )"
             }
           },
           "imports": [
@@ -403,6 +415,10 @@
             "UtcTimeLibrary": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.0, )"
             }
           },
           "imports": [

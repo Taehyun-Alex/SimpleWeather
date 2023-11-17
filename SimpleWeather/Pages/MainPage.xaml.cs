@@ -1,5 +1,7 @@
+using Microsoft.Maui.Controls.PlatformConfiguration;
 using SimpleWeather.Models;
 using System.Timers;
+
 
 namespace SimpleWeather.Pages;
 
@@ -10,6 +12,7 @@ public partial class MainPage : ContentPage
     private bool isCitySet = false; //set this boolean to see if the city has been set.
     private readonly System.Timers.Timer timer; 
     private bool isAutoRefreshEnabled;
+    private bool isNotificationEnabled;
 
     [Obsolete]
     public MainPage()
@@ -17,10 +20,11 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
         WeatherList = new List<Models.ApiModels.List>();
 
+        // For auto refresh switch
         timer = new System.Timers.Timer(10000); // set up the timer for 10seconds for autoreloading the mainpage.
         timer.Elapsed += TimerElapsed;
-
         isAutoRefreshEnabled = Preferences.Get("AutoRefreshSwitchValue", true); //bring the switch value from settingpage.
+
     }
 
     private void menuButton_Clicked(object sender, EventArgs e)
@@ -55,9 +59,12 @@ public partial class MainPage : ContentPage
         Navigation.PushAsync(searchPage);
     }
 
+    [Obsolete]
     protected async override void OnAppearing()
     {
         base.OnAppearing();
+
+        isNotificationEnabled = Preferences.Get("NotificationSwitchValue", true);
 
         if (!isCitySet) // if the city has not set yet, the default will be Perth.
         {
@@ -66,7 +73,7 @@ public partial class MainPage : ContentPage
         }
 
         //OnAppearing, it looks at the city name on the mainpage, and checks for its boolean value.
-       //and according to its boolean value, it sets the source of the imagebutton(favButton)
+        //and according to its boolean value, it sets the source of the imagebutton(favButton)
         var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == city);
 
         if (favCity != null)
@@ -82,6 +89,11 @@ public partial class MainPage : ContentPage
         else
         {
             timer.Stop();
+        }
+
+        if (isNotificationEnabled)
+        {
+            ShowNotification("Hello user! \nHave a beautiful day");
         }
     }
 
@@ -201,5 +213,14 @@ public partial class MainPage : ContentPage
     private void StopAutoRefresh()
     {
         timer.Stop();
+    }
+
+    [Obsolete]
+    private void ShowNotification(string message)
+    {
+        if (Device.RuntimePlatform == Device.Android)
+        {
+            DisplayAlert("Notification", message, "Thank you");
+        }
     }
 }

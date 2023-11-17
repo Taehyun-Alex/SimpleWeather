@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4AhnGDsGWwydoy+Soej4sZbjs2d1aJrGf1E5vi7ZoLza1JjqEa/v1xb/isvm4pM2XP3UcLCFGWdnl/pdwQCTDA==",
+  "dgSpecHash": "0BmiaECerAG1zO90cAbxiFhzaoqe9HuSraLe6xRM88FzoUvzPVKu83NHfWXnm/trIozU0eu4yRa8U2+RikgsPQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\SimpleWeather\\SimpleWeather\\SimpleWeather.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\pclstorage\\1.0.2\\pclstorage.1.0.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\utctimelibrary\\1.0.0\\utctimelibrary.1.0.0.nupkg.sha512",
@@ -101,6 +102,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.13\\xamarin.androidx.viewpager.1.0.0.13.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.15\\xamarin.androidx.viewpager2.1.0.0.15.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.window\\1.0.0.8\\xamarin.androidx.window.1.0.0.8.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.essentials\\1.8.0\\xamarin.essentials.1.8.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.google.android.material\\1.6.0\\xamarin.google.android.material.1.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.google.crypto.tink.android\\1.6.1.6\\xamarin.google.crypto.tink.android.1.6.1.6.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.5\\xamarin.google.guava.listenablefuture.1.0.0.5.nupkg.sha512",

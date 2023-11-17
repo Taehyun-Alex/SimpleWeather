@@ -9,13 +9,21 @@ public partial class SettingPage : ContentPage
 	{
 		InitializeComponent();
         this.mainPage = mainPage;
+
+        // for unit swtich
         bool savedValue = Preferences.Get("UnitSwitchValue", true);
         unitSwitch.IsToggled = savedValue;
         Preferences.Set("UnitSwitchValue", savedValue);
 
+        // for autoRefresh switch
         bool autoRefreshValue = Preferences.Get("AutoRefreshSwitchValue", true);
         autoRefreshSwitch.IsToggled = autoRefreshValue;
         Preferences.Set("AutoRefreshSwitchValue", autoRefreshValue);
+
+        // for notification switch
+        bool notificationValue = Preferences.Get("NotificationSwitchValue", true);
+        notificationSwitch.IsToggled = notificationValue;
+        Preferences.Set("NotificationSwitchValue", notificationValue);
     }
 
 
@@ -62,7 +70,7 @@ public partial class SettingPage : ContentPage
 
     private void notificationSwitch_Toggled(object sender, ToggledEventArgs e)
     {
-
+        Preferences.Set("NotificationSwitchValue", e.Value);
     }
 
     private void darkModeSwitch_Toggled(object sender, ToggledEventArgs e)

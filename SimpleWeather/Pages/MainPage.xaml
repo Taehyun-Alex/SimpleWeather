@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimpleWeather.Pages.MainPage"
              xmlns:ApiModels="clr-namespace:SimpleWeather.Models.ApiModels"
-             Title="MainPage">
+             Title="MainPage"
+             Style="{DynamicResource Theme}">
 
     <RefreshView x:Name="refreshview" Refreshing="refreshview_Refreshing">
         <StackLayout VerticalOptions="FillAndExpand">

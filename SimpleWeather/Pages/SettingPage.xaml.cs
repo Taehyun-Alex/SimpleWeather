@@ -24,6 +24,11 @@ public partial class SettingPage : ContentPage
         bool notificationValue = Preferences.Get("NotificationSwitchValue", true);
         notificationSwitch.IsToggled = notificationValue;
         Preferences.Set("NotificationSwitchValue", notificationValue);
+
+        // for darkmode switch
+        bool darkModeValue = Preferences.Get("DarkModeValue", false);
+        darkModeSwitch.IsToggled = darkModeValue;
+        Preferences.Set("DarkModeValue", darkModeValue);
     }
 
 
@@ -75,6 +80,14 @@ public partial class SettingPage : ContentPage
 
     private void darkModeSwitch_Toggled(object sender, ToggledEventArgs e)
     {
-
+        if (e.Value) // from ChatGPT
+        {
+            Application.Current.Resources["Theme"] = Application.Current.Resources["DarkTheme"];
+        }
+        else
+        {
+            Application.Current.Resources["Theme"] = Application.Current.Resources["LightTheme"];
+        }
+        Preferences.Set("DarkModeValue", e.Value);
     }
 }

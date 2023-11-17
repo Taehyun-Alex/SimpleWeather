@@ -124,10 +124,10 @@
                 Placeholder="We love your opinion!"
                 Margin="10"/>
         </Frame>
-
-        <ImageButton
-            Source="submit_button.svg"
-            Grid.Row="4"
-            HorizontalOptions="End"/>
+ 
+        <Grid Grid.Row="4" HorizontalOptions="End">
+            <ImageButton Source="submit_button.svg"/>
+            <Label Text="Submit" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Saira-VariableFont.ttf" FontAttributes="Bold" Style="{DynamicResource LabelPrimary}"/>
+        </Grid>
     </Grid>
 </ContentPage>

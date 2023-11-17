@@ -9,4 +9,7 @@
         <Setter x:Name="TextColorPrimary" Property="TextColor" Value="Black"/>
     </Style>
 
+    <Color x:Key="PrimaryColor">LightBlue</Color>
+    <Color x:Key="SecondaryColor">DarkTurquoise</Color>
+    <Color x:Key="ThirdColor">LightYellow</Color>
 </ResourceDictionary>

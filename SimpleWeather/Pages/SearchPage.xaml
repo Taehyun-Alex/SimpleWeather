@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimpleWeather.Pages.SearchPage"
              Title="SearchPage"
-             Style="{DynamicResource Theme}">
+             Style="{DynamicResource PageStyle}">
     <Frame
         Margin="20"
         CornerRadius="40"
-        BackgroundColor="LightGray">
+        BackgroundColor="{DynamicResource ThirdColor}">
 
         <Grid
             RowDefinitions="0.1*, 0.05*, 0.85*"
@@ -32,7 +32,8 @@
                     Margin="20,0"
                     MaximumWidthRequest="300"
                     x:Name="searchBar"
-                    Text="{Binding SearchQuery, Mode=TwoWay}"/>
+                    Text="{Binding SearchQuery, Mode=TwoWay}"
+                    TextColor="{DynamicResource SecondaryColor}"/>
             </HorizontalStackLayout>
 
             <ImageButton
@@ -58,14 +59,14 @@
                 Grid.Row="2"
                 CornerRadius="10"
                 Grid.ColumnSpan="2"
-                BackgroundColor="LightGray">
+                BackgroundColor="{DynamicResource ThirdColor}">
 
                 <ListView x:Name="cityListView"
                           ItemsSource="{Binding FilteredCityNames}"
                           ItemTapped="cityListView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding}"/>
+                            <TextCell Text="{Binding}" TextColor="{DynamicResource SecondaryColor}"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

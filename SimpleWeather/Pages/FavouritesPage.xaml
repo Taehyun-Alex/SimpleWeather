@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimpleWeather.Pages.FavouritesPage"
              Title="FavouritesPage"
-             Style="{DynamicResource Theme}">
+             Style="{DynamicResource PageStyle}">
     <Grid 
         RowDefinitions="0.1*, 0.9*"
         Margin="20">
@@ -12,7 +12,8 @@
             Text="Favourites"
             HorizontalOptions="Start"
             FontFamily="Saira-VariableFont.ttf"
-            VerticalTextAlignment="Center"/>
+            VerticalTextAlignment="Center"
+            Style="{DynamicResource LabelPrimary}"/>
         
         <ImageButton 
             Source="x_button.svg"
@@ -23,7 +24,7 @@
         <Frame
             Grid.Row="1"
             CornerRadius="40"
-            BackgroundColor="LightGray">
+            BackgroundColor="{DynamicResource ThirdColor}">
 
             <CollectionView x:Name="favCityView">
                 <CollectionView.ItemsLayout>
@@ -33,7 +34,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="0.8*, 0.2*">
-                            <Label Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center" />
+                            <Label Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}"/>
                             <ImageButton Grid.Column="1" x:Name="imageButton" Clicked="ImageButton_Clicked" >
                                 <ImageButton.Triggers>
                                     <DataTrigger TargetType="ImageButton" Binding="{Binding IsFavorite}" Value="True">

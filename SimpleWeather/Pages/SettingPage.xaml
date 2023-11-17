@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimpleWeather.Pages.SettingPage"
              Title="SettingPage"
-             Style="{DynamicResource Theme}">
+             Style="{DynamicResource PageStyle}">
     <Grid 
         RowDefinitions="0.1*, 0.45*, 0.05*, 0.35*, 0.05*"
         Margin="20">
@@ -17,16 +17,17 @@
             Text="Weather Settings"
             HorizontalTextAlignment="Start"
             VerticalTextAlignment="Center"
-            FontFamily="Saira-VariableFont.ttf"/>
+            FontFamily="Saira-VariableFont.ttf"
+            Style="{DynamicResource LabelPrimary}"/>
         
         <ImageButton 
             Source="x_button.svg"
             HorizontalOptions="End"
             x:Name="xButton"
             Clicked="xButton_Clicked"/>
-        
+
         <Frame
-            BackgroundColor="LightSteelBlue"
+            BackgroundColor="{DynamicResource ThirdColor}"
             Grid.Row="1"
             BorderColor="PeachPuff"
             CornerRadius="10"
@@ -42,7 +43,8 @@
                     Grid.ColumnSpan="2"
                     FontFamily="Saira-VariableFont.ttf"
                     Margin="20"
-                    VerticalTextAlignment="Center"/>
+                    VerticalTextAlignment="Center"
+                    Style="{DynamicResource LabelPrimary}"/>
 
                 <Switch IsToggled="True"
                         Grid.Column="2"
@@ -57,7 +59,8 @@
                     Grid.ColumnSpan="2"
                     FontFamily="Saira-VariableFont.ttf"
                     Margin="20"
-                    VerticalTextAlignment="Center"/>
+                    VerticalTextAlignment="Center"
+                    Style="{DynamicResource LabelPrimary}"/>
 
                 <Switch IsToggled="False"
                         Grid.Row="1"
@@ -73,7 +76,8 @@
                     Grid.ColumnSpan="2"
                     FontFamily="Saira-VariableFont.ttf"
                     Margin="20"
-                    VerticalTextAlignment="Center"/>
+                    VerticalTextAlignment="Center"
+                    Style="{DynamicResource LabelPrimary}"/>
 
                 <Switch IsToggled="False"
                         Grid.Row="2"
@@ -88,7 +92,8 @@
                        Grid.ColumnSpan="2"
                        FontFamily="Saira-VariableFont.ttf"
                        Margin="20"
-                       VerticalTextAlignment="Center"/>
+                       VerticalTextAlignment="Center"
+                       Style="{DynamicResource LabelPrimary}"/>
 
                 <Switch IsToggled="False"
                         Grid.Row="3"
@@ -105,10 +110,11 @@
             Grid.Row="2"
             VerticalTextAlignment="Center"
             FontFamily="Saira-VariableFont.ttf"
-            Margin="20,0,0,0"/>
+            Margin="20,0,0,0"
+            Style="{DynamicResource LabelPrimary}"/>
 
         <Frame
-            BackgroundColor="LightSlateGray"
+            BackgroundColor="{DynamicResource ThirdColor}"
             Grid.Row="3"
             BorderColor="PeachPuff"
             CornerRadius="45"

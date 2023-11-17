@@ -80,13 +80,15 @@ public partial class SettingPage : ContentPage
 
     private void darkModeSwitch_Toggled(object sender, ToggledEventArgs e)
     {
-        if (e.Value) // from ChatGPT
+        Application.Current.Resources.MergedDictionaries.Clear();
+
+        if (e.Value) // from Aaron's week19 recording
         {
-            Application.Current.Resources["Theme"] = Application.Current.Resources["DarkTheme"];
+            Application.Current.Resources.MergedDictionaries.Add(new DarkTheme());
         }
         else
         {
-            Application.Current.Resources["Theme"] = Application.Current.Resources["LightTheme"];
+            Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
         }
         Preferences.Set("DarkModeValue", e.Value);
     }

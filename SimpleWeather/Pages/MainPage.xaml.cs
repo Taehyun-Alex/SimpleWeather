@@ -13,6 +13,7 @@ public partial class MainPage : ContentPage
     private readonly System.Timers.Timer timer; 
     private bool isAutoRefreshEnabled;
     private bool isNotificationEnabled;
+    private bool isDarkModeEnabled;
 
     [Obsolete]
     public MainPage()
@@ -24,7 +25,7 @@ public partial class MainPage : ContentPage
         timer = new System.Timers.Timer(10000); // set up the timer for 10seconds for autoreloading the mainpage.
         timer.Elapsed += TimerElapsed;
         isAutoRefreshEnabled = Preferences.Get("AutoRefreshSwitchValue", true); //bring the switch value from settingpage.
-
+        isDarkModeEnabled = Preferences.Get("DarkModeValue", true);
     }
 
     private void menuButton_Clicked(object sender, EventArgs e)

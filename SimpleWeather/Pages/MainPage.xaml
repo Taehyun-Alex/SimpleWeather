@@ -4,7 +4,7 @@
              x:Class="SimpleWeather.Pages.MainPage"
              xmlns:ApiModels="clr-namespace:SimpleWeather.Models.ApiModels"
              Title="MainPage"
-             Style="{DynamicResource Theme}">
+             Style="{DynamicResource PageStyle}">
 
     <RefreshView x:Name="refreshview" Refreshing="refreshview_Refreshing">
         <StackLayout VerticalOptions="FillAndExpand">
@@ -41,7 +41,7 @@
                 FontSize="20"
                 VerticalTextAlignment="Start"
                 FontFamily="Saira-VariableFont.ttf"
-                TextColor="{DynamicResource LightTextColor}"
+                Style="{DynamicResource LabelPrimary}"
                 />
 
                 <Label
@@ -50,28 +50,33 @@
                 Grid.Column="1"
                 FontSize="40"
                 FontFamily="Saira-VariableFont.ttf"
-                FontAttributes="Bold"/>
+                FontAttributes="Bold"
+                Style="{DynamicResource LabelPrimary}"/>
 
                 <Label
                 x:Name="time_label"
                 Grid.Row="3"
                 Grid.Column="1"
                 FontSize="20"
-                FontFamily="Saira-VariableFont.ttf"/>
+                FontFamily="Saira-VariableFont.ttf"
+                    Style="{DynamicResource LabelPrimary}"/>
 
                 <Label
                 x:Name="humid_label"
                 Grid.Row="3"
                 Grid.Column="2"
+                    Grid.ColumnSpan="2"
                 FontSize="20"
-                FontFamily="Saira-VariableFont.ttf"/>
+                FontFamily="Saira-VariableFont.ttf"
+                    Style="{DynamicResource LabelPrimary}"/>
 
                 <Label
                 x:Name="time_label2"
                 Grid.Row="1"
                 Grid.Column="3"
                 FontFamily="Saira-VariableFont.ttf"
-                FontAttributes="Bold"/>
+                FontAttributes="Bold"
+                    Style="{DynamicResource LabelPrimary}"/>
 
                 <Image
                 x:Name="initial_weather_icon"
@@ -94,7 +99,8 @@
                 CornerRadius="30"
                 HasShadow="True"
                 BackgroundColor="LightGrey"
-                BorderColor="AliceBlue">
+                BorderColor="AliceBlue"
+                    Background="{DynamicResource ThirdColor}">
 
                     <CollectionView x:Name="CvWeather">
                         <CollectionView.ItemsLayout>
@@ -104,7 +110,7 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Grid ColumnDefinitions="2*, *, *, *">
-                                    <Label Grid.Column="0" VerticalTextAlignment="Center">
+                                        <Label Grid.Column="0" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span Text="{Binding dateTime, StringFormat='{}{0:dd/MMM hh:mm tt}'}"/>
@@ -112,7 +118,7 @@
                                         </Label.FormattedText>
                                     </Label>
 
-                                    <Label  Grid.Column="1">
+                                        <Label  Grid.Column="1" Style="{DynamicResource LabelPrimary}">
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span Text="{Binding main.humidity}" />
@@ -127,7 +133,7 @@
                                     Grid.Column="2"
                                     HeightRequest="50"/>
 
-                                    <Label Grid.Column="3" VerticalTextAlignment="Center">
+                                        <Label Grid.Column="3" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span Text="{Binding main.temp}" />

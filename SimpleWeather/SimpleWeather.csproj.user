@@ -14,6 +14,9 @@
     <MauiXaml Update="DarkTheme.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="LightTheme.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Resources\Styles\LightTheme.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

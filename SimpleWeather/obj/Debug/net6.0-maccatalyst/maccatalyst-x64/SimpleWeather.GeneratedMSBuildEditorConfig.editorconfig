@@ -28,6 +28,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.DarkTheme.xa
 build_metadata.AdditionalFiles.TargetPath = DarkTheme.xaml
 build_metadata.AdditionalFiles.RelativePath = DarkTheme.xaml
 
+[C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/LightTheme.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.LightTheme.xaml
+build_metadata.AdditionalFiles.TargetPath = LightTheme.xaml
+build_metadata.AdditionalFiles.RelativePath = LightTheme.xaml
+
 [C:/Users/Admin/source/repos/SimpleWeather/SimpleWeather/Pages/FavouritesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SimpleWeather.Pages.FavouritesPage.xaml

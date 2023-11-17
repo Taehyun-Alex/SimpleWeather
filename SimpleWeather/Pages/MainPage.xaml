@@ -35,12 +35,13 @@
                 Grid.Row="0"/>
 
                 <Label
+                x:Name="city_label"
                 Grid.Row="1"
                 Grid.Column="1"
                 FontSize="20"
-                x:Name="city_label"
                 VerticalTextAlignment="Start"
                 FontFamily="Saira-VariableFont.ttf"
+                TextColor="{DynamicResource LightTextColor}"
                 />
 
                 <Label

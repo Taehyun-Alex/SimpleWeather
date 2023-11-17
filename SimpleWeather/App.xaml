@@ -4,17 +4,19 @@
              xmlns:local="clr-namespace:SimpleWeather"
              x:Class="SimpleWeather.App">
     <Application.Resources>
+        
         <ResourceDictionary>
             
             <Style x:Key="LightTheme" TargetType="ContentPage">
                 <!-- Define your light theme styles here -->
-                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="{StaticResource LightBackgroundColor}" />
+                
                 <!-- Add other styles as needed -->
             </Style>
 
             <Style x:Key="DarkTheme" TargetType="ContentPage">
                 <!-- Define your dark theme styles here -->
-                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBackgrounndColor}" />
                 <!-- Add other styles as needed -->
             </Style>
 
@@ -22,6 +24,8 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
                 <ResourceDictionary Source="Resources/Styles/LightTheme.xaml" />
+                <ResourceDictionary Source="DarkTheme.xaml"/>
+                <ResourceDictionary Source="LightTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

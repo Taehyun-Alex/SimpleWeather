@@ -4,6 +4,7 @@
              x:Class="SimpleWeather.Pages.SettingPage"
              Title="SettingPage"
              Style="{DynamicResource PageStyle}">
+    
     <Grid 
         RowDefinitions="0.1*, 0.45*, 0.05*, 0.35*, 0.05*"
         Margin="20">

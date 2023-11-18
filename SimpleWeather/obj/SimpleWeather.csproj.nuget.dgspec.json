@@ -63,7 +63,7 @@
           "dependencies": {
             "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[8.2.1, )"
+              "version": "[8.2.2, )"
             },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
@@ -185,7 +185,7 @@
           "dependencies": {
             "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[8.2.1, )"
+              "version": "[8.2.2, )"
             },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
@@ -288,7 +288,7 @@
           "dependencies": {
             "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[8.2.1, )"
+              "version": "[8.2.2, )"
             },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
@@ -392,7 +392,7 @@
           "dependencies": {
             "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[8.2.1, )"
+              "version": "[8.2.2, )"
             },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",

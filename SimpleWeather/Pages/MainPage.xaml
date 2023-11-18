@@ -6,9 +6,16 @@
              Title="MainPage"
              Style="{DynamicResource PageStyle}">
 
-    <RefreshView x:Name="refreshview" Refreshing="refreshview_Refreshing">
+    <SwipeView>
+        <SwipeView.RightItems>
+            <SwipeItems >
+                <SwipeItem IconImageSource="full_loveheart.svg" Invoked="OnFavouritesSwipe" BackgroundColor="{DynamicResource ThirdColor}"/>
+            </SwipeItems>
+        </SwipeView.RightItems>
+        
+        <RefreshView x:Name="refreshview" Refreshing="refreshview_Refreshing">
+        
         <StackLayout VerticalOptions="FillAndExpand">
-
             <ScrollView VerticalOptions="FillAndExpand">
 
 
@@ -154,5 +161,5 @@
 
         </StackLayout>
     </RefreshView>
-
+    </SwipeView>
 </ContentPage>

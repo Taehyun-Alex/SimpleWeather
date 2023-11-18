@@ -51,8 +51,6 @@ public partial class MainPage : ContentPage
             favButton.Source = favCity.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
         }
 
-        FavouritesPage favPage = new FavouritesPage();
-        Navigation.PushAsync(favPage);
     }
 
     private void searchButton_Clicked(object sender, EventArgs e)
@@ -226,5 +224,12 @@ public partial class MainPage : ContentPage
         {
             DisplayAlert("Notification", message, "Thank you");
         }
+    }
+
+    private void OnFavouritesSwipe(object sender, EventArgs e)
+    {
+        // Perform navigation to the FavouritesPage
+        FavouritesPage favPage = new FavouritesPage();
+        Navigation.PushAsync(favPage);
     }
 }

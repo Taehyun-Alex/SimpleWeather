@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0-android31.0": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -2029,7 +2029,7 @@
       }
     },
     "net6.0-android31.0/android-arm": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -4056,7 +4056,7 @@
       }
     },
     "net6.0-android31.0/android-arm64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -6083,7 +6083,7 @@
       }
     },
     "net6.0-android31.0/android-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -8110,7 +8110,7 @@
       }
     },
     "net6.0-android31.0/android-x86": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -10137,7 +10137,7 @@
       }
     },
     "net6.0-android31.0/iossimulator-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -12164,7 +12164,7 @@
       }
     },
     "net6.0-android31.0/maccatalyst-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -14191,7 +14191,7 @@
       }
     },
     "net6.0-android31.0/win10-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -16218,7 +16218,7 @@
       }
     },
     "net6.0-ios16.1": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -16557,7 +16557,7 @@
       }
     },
     "net6.0-ios16.1/android-arm": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -16896,7 +16896,7 @@
       }
     },
     "net6.0-ios16.1/android-arm64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -17235,7 +17235,7 @@
       }
     },
     "net6.0-ios16.1/android-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -17574,7 +17574,7 @@
       }
     },
     "net6.0-ios16.1/android-x86": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -17913,7 +17913,7 @@
       }
     },
     "net6.0-ios16.1/iossimulator-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -18252,7 +18252,7 @@
       }
     },
     "net6.0-ios16.1/maccatalyst-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -18591,7 +18591,7 @@
       }
     },
     "net6.0-ios16.1/win10-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -18930,7 +18930,7 @@
       }
     },
     "net6.0-maccatalyst16.1": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -19269,7 +19269,7 @@
       }
     },
     "net6.0-maccatalyst16.1/android-arm": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -19608,7 +19608,7 @@
       }
     },
     "net6.0-maccatalyst16.1/android-arm64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -19947,7 +19947,7 @@
       }
     },
     "net6.0-maccatalyst16.1/android-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -20286,7 +20286,7 @@
       }
     },
     "net6.0-maccatalyst16.1/android-x86": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -20625,7 +20625,7 @@
       }
     },
     "net6.0-maccatalyst16.1/iossimulator-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -20964,7 +20964,7 @@
       }
     },
     "net6.0-maccatalyst16.1/maccatalyst-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -21303,7 +21303,7 @@
       }
     },
     "net6.0-maccatalyst16.1/win10-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -21642,7 +21642,7 @@
       }
     },
     "net6.0-windows10.0.19041": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -22107,7 +22107,7 @@
       }
     },
     "net6.0-windows10.0.19041/android-arm": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -22544,7 +22544,7 @@
       }
     },
     "net6.0-windows10.0.19041/android-arm64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -22981,7 +22981,7 @@
       }
     },
     "net6.0-windows10.0.19041/android-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -23418,7 +23418,7 @@
       }
     },
     "net6.0-windows10.0.19041/android-x86": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -23855,7 +23855,7 @@
       }
     },
     "net6.0-windows10.0.19041/iossimulator-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -24292,7 +24292,7 @@
       }
     },
     "net6.0-windows10.0.19041/maccatalyst-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -24729,7 +24729,7 @@
       }
     },
     "net6.0-windows10.0.19041/win10-x64": {
-      "CommunityToolkit.Mvvm/8.2.1": {
+      "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -25173,10 +25173,10 @@
     }
   },
   "libraries": {
-    "CommunityToolkit.Mvvm/8.2.1": {
-      "sha512": "I24ofWVEdplxYjUez9/bljv/qb8r8Ccj6cvYXHexNBegLaD3iDy3QrzAAOYVMmfGWIXxlU1ZtECQNfU07+6hXQ==",
+    "CommunityToolkit.Mvvm/8.2.2": {
+      "sha512": "r0g0k9tGYdrnz8R7T3x5UiokDffeevzK/2P/9SBL6fqLgN8B157MIi/bVUWI1KAz6ZorZrK9AdABCWUeXZZsvA==",
       "type": "package",
-      "path": "communitytoolkit.mvvm/8.2.1",
+      "path": "communitytoolkit.mvvm/8.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -25191,7 +25191,7 @@
         "build/netstandard2.1/CommunityToolkit.Mvvm.targets",
         "buildTransitive/netstandard2.0/CommunityToolkit.Mvvm.targets",
         "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets",
-        "communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+        "communitytoolkit.mvvm.8.2.2.nupkg.sha512",
         "communitytoolkit.mvvm.nuspec",
         "lib/net6.0/CommunityToolkit.Mvvm.dll",
         "lib/net6.0/CommunityToolkit.Mvvm.pdb",
@@ -28609,7 +28609,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-android31.0": [
-      "CommunityToolkit.Mvvm >= 8.2.1",
+      "CommunityToolkit.Mvvm >= 8.2.2",
       "Microsoft.Maui.Dependencies >= 6.0.553",
       "Microsoft.Maui.Extensions >= 6.0.553",
       "Newtonsoft.Json >= 13.0.3",
@@ -28618,7 +28618,7 @@
       "Xamarin.Essentials >= 1.8.0"
     ],
     "net6.0-ios16.1": [
-      "CommunityToolkit.Mvvm >= 8.2.1",
+      "CommunityToolkit.Mvvm >= 8.2.2",
       "Microsoft.Maui.Dependencies >= 6.0.553",
       "Microsoft.Maui.Extensions >= 6.0.553",
       "Newtonsoft.Json >= 13.0.3",
@@ -28628,7 +28628,7 @@
       "Xamarin.Essentials >= 1.8.0"
     ],
     "net6.0-maccatalyst16.1": [
-      "CommunityToolkit.Mvvm >= 8.2.1",
+      "CommunityToolkit.Mvvm >= 8.2.2",
       "Microsoft.Maui.Dependencies >= 6.0.553",
       "Microsoft.Maui.Extensions >= 6.0.553",
       "Newtonsoft.Json >= 13.0.3",
@@ -28638,7 +28638,7 @@
       "Xamarin.Essentials >= 1.8.0"
     ],
     "net6.0-windows10.0.19041": [
-      "CommunityToolkit.Mvvm >= 8.2.1",
+      "CommunityToolkit.Mvvm >= 8.2.2",
       "Microsoft.Maui.Dependencies >= 6.0.553",
       "Microsoft.Maui.Extensions >= 6.0.553",
       "Newtonsoft.Json >= 13.0.3",
@@ -28710,7 +28710,7 @@
         "dependencies": {
           "CommunityToolkit.Mvvm": {
             "target": "Package",
-            "version": "[8.2.1, )"
+            "version": "[8.2.2, )"
           },
           "Microsoft.Maui.Dependencies": {
             "target": "Package",
@@ -28832,7 +28832,7 @@
         "dependencies": {
           "CommunityToolkit.Mvvm": {
             "target": "Package",
-            "version": "[8.2.1, )"
+            "version": "[8.2.2, )"
           },
           "Microsoft.Maui.Dependencies": {
             "target": "Package",
@@ -28935,7 +28935,7 @@
         "dependencies": {
           "CommunityToolkit.Mvvm": {
             "target": "Package",
-            "version": "[8.2.1, )"
+            "version": "[8.2.2, )"
           },
           "Microsoft.Maui.Dependencies": {
             "target": "Package",
@@ -29039,7 +29039,7 @@
         "dependencies": {
           "CommunityToolkit.Mvvm": {
             "target": "Package",
-            "version": "[8.2.1, )"
+            "version": "[8.2.2, )"
           },
           "Microsoft.Maui.Dependencies": {
             "target": "Package",

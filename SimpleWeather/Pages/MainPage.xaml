@@ -93,8 +93,8 @@
 
                 <Frame
                 Grid.Row="4"
-                Grid.Column="1"
-                Grid.ColumnSpan="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
                 Margin="20"
                 CornerRadius="30"
                 HasShadow="True"
@@ -109,7 +109,7 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Grid ColumnDefinitions="2*, *, *, *">
+                                <Grid ColumnDefinitions="*, 2*, *, *">
                                         <Label Grid.Column="0" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
                                         <Label.FormattedText>
                                             <FormattedString>
@@ -118,11 +118,11 @@
                                         </Label.FormattedText>
                                     </Label>
 
-                                        <Label  Grid.Column="1" Style="{DynamicResource LabelPrimary}">
+                                        <Label  Grid.Column="1" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span Text="{Binding main.humidity}" />
-                                                <Span Text="%" />
+                                                <Span Text="% humidity" />
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
@@ -137,7 +137,7 @@
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span Text="{Binding main.temp}" />
-                                                <Span Text="°C" />
+                                                <Span Text="°C"/>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>

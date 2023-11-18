@@ -22,10 +22,10 @@ public partial class MainPage : ContentPage
         WeatherList = new List<Models.ApiModels.List>();
 
         // For auto refresh switch
-        timer = new System.Timers.Timer(10000); // set up the timer for 10seconds for autoreloading the mainpage.
+        timer = new System.Timers.Timer(60000); // set up the timer for 60seconds(60000 milliseconds) for autoreloading the mainpage.
         timer.Elapsed += TimerElapsed;
         isAutoRefreshEnabled = Preferences.Get("AutoRefreshSwitchValue", true); //bring the switch value from settingpage.
-        isDarkModeEnabled = Preferences.Get("DarkModeValue", true);
+        isDarkModeEnabled = Preferences.Get("DarkModeValue", true); // does this do anything?
     }
 
     private void menuButton_Clicked(object sender, EventArgs e)

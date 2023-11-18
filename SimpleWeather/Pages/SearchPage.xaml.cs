@@ -64,9 +64,18 @@ public partial class SearchPage : ContentPage
         {
             if (mainPage != null)
             {
-                await mainPage.GetLocationByCity((string)selectedCity);
-                // Navigate back to MainPage
-                await Navigation.PopAsync();
+                if (Preferences.Get("UnitSwitchValue", true))
+                {
+                    await mainPage.GetLocationByCity((string)selectedCity);
+                    // Navigate back to MainPage
+                    await Navigation.PopAsync();
+                }
+                else
+                {
+                    await mainPage.GetLocationByCityInFahrenheit((string)selectedCity);
+                    // Navigate back to MainPage
+                    await Navigation.PopAsync();
+                }
             }
         }
     }

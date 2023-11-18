@@ -6,126 +6,114 @@
              Style="{DynamicResource PageStyle}">
 
     <ScrollView VerticalOptions="FillAndExpand">
-        <Grid 
-        RowDefinitions="0.1*, 0.45*, 0.05*, 0.35*, 0.05*"
-        Margin="20">
+        <Grid RowDefinitions="0.1*, 0.45*, 0.05*, 0.35*, 0.05*" Margin="20">
 
             <ActivityIndicator x:Name="activityIndicator"
-                           IsRunning="False"
-                           Color="Purple"
-                           IsVisible="False"/>
+                               IsRunning="False"
+                               Color="Purple"
+                               IsVisible="False"/>
 
-            <Label
-            Text="Weather Settings"
-            HorizontalTextAlignment="Start"
-            VerticalTextAlignment="Center"
-            FontFamily="Saira-VariableFont.ttf"
-            Style="{DynamicResource LabelPrimary}"/>
+            <Label Text="Weather Settings"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   FontFamily="Saira-VariableFont.ttf"
+                   Style="{DynamicResource LabelPrimary}"/>
 
-            <ImageButton 
-            Source="x_button.svg"
-            HorizontalOptions="End"
-            x:Name="xButton"
-            Clicked="xButton_Clicked"/>
+            <ImageButton Source="x_button.svg"
+                         HorizontalOptions="End"
+                         x:Name="xButton"
+                         Clicked="xButton_Clicked"/>
 
-            <Frame
-            BackgroundColor="{DynamicResource ThirdColor}"
-            Grid.Row="1"
-            BorderColor="PeachPuff"
-            CornerRadius="10"
-            HasShadow="True">
+            <Frame BackgroundColor="{DynamicResource ThirdColor}"
+                   Grid.Row="1"
+                   BorderColor="PeachPuff"
+                   CornerRadius="10"
+                   HasShadow="True">
 
-                <Grid
-                RowDefinitions="*, *, *, *"
-                ColumnDefinitions="0.4*, 0.3*, 0.3*">
+                <Grid RowDefinitions="*, *, *, *"
+                      ColumnDefinitions="0.4*, 0.3*, 0.3*">
 
-                    <Label
-                    Text="Unit (Off °F / On °C)"
-                    Grid.Row="0"
-                    Grid.ColumnSpan="2"
-                    FontFamily="Saira-VariableFont.ttf"
-                    Margin="20"
-                    VerticalTextAlignment="Center"
-                    Style="{DynamicResource LabelPrimary}"/>
+                    <Label Text="Unit (Off °F / On °C)"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           FontFamily="Saira-VariableFont.ttf"
+                           Margin="20"
+                           VerticalTextAlignment="Center"
+                           Style="{DynamicResource LabelPrimary}"/>
 
                     <Switch IsToggled="True"
-                        Grid.Column="2"
-                        OnColor="AliceBlue"
-                        ThumbColor="Black"
-                        x:Name="unitSwitch"
-                        Toggled="unitSwitch_Toggled"/>
+                            Grid.Column="2"
+                            OnColor="AliceBlue"
+                            ThumbColor="Black"
+                            x:Name="unitSwitch"
+                            Toggled="unitSwitch_Toggled"/>
 
-                    <Label
-                    Text="Auto Refresh (Every 1min)"
-                    Grid.Row="1"
-                    Grid.ColumnSpan="2"
-                    FontFamily="Saira-VariableFont.ttf"
-                    Margin="20"
-                    VerticalTextAlignment="Center"
-                    Style="{DynamicResource LabelPrimary}"/>
-
-                    <Switch IsToggled="False"
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        OnColor="AliceBlue"
-                        ThumbColor="Black"
-                        x:Name="autoRefreshSwitch"
-                        Toggled="autoRefreshSwitch_Toggled"/>
-
-                    <Label
-                    Text="Notifications"
-                    Grid.Row="2"
-                    Grid.ColumnSpan="2"
-                    FontFamily="Saira-VariableFont.ttf"
-                    Margin="20"
-                    VerticalTextAlignment="Center"
-                    Style="{DynamicResource LabelPrimary}"/>
+                    <Label Text="Auto Refresh (Every 1min)"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           FontFamily="Saira-VariableFont.ttf"
+                           Margin="20"
+                           VerticalTextAlignment="Center"
+                           Style="{DynamicResource LabelPrimary}"/>
 
                     <Switch IsToggled="False"
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        OnColor="AliceBlue"
-                        ThumbColor="Black"
-                        x:Name="notificationSwitch"
-                        Toggled="notificationSwitch_Toggled"/>
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            OnColor="AliceBlue"
+                            ThumbColor="Black"
+                            x:Name="autoRefreshSwitch"
+                            Toggled="autoRefreshSwitch_Toggled"/>
+
+                    <Label Text="Notifications"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="2"
+                           FontFamily="Saira-VariableFont.ttf"
+                           Margin="20"
+                           VerticalTextAlignment="Center"
+                           Style="{DynamicResource LabelPrimary}"/>
+
+                    <Switch IsToggled="False"
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            OnColor="AliceBlue"
+                            ThumbColor="Black"
+                            x:Name="notificationSwitch"
+                            Toggled="notificationSwitch_Toggled"/>
 
                     <Label Text="Dark mode"
-                       Grid.Row="3"
-                       Grid.ColumnSpan="2"
-                       FontFamily="Saira-VariableFont.ttf"
-                       Margin="20"
-                       VerticalTextAlignment="Center"
-                       Style="{DynamicResource LabelPrimary}"/>
+                           Grid.Row="3"
+                           Grid.ColumnSpan="2"
+                           FontFamily="Saira-VariableFont.ttf"
+                           Margin="20"
+                           VerticalTextAlignment="Center"
+                           Style="{DynamicResource LabelPrimary}"/>
 
                     <Switch IsToggled="False"
-                        Grid.Row="3"
-                        Grid.Column="2"
-                        OnColor="AliceBlue"
-                        ThumbColor="Black"
-                        x:Name="darkModeSwitch"
-                        Toggled="darkModeSwitch_Toggled"/>
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            OnColor="AliceBlue"
+                            ThumbColor="Black"
+                            x:Name="darkModeSwitch"
+                            Toggled="darkModeSwitch_Toggled"/>
                 </Grid>
             </Frame>
 
-            <Label
-            Text="Room for improvement?"
-            Grid.Row="2"
-            VerticalTextAlignment="Center"
-            FontFamily="Saira-VariableFont.ttf"
-            Margin="20,0,0,0"
-            Style="{DynamicResource LabelPrimary}"/>
+            <Label Text="Room for improvement?"
+                   Grid.Row="2"
+                   VerticalTextAlignment="Center"
+                   FontFamily="Saira-VariableFont.ttf"
+                   Margin="20,0,0,0"
+                   Style="{DynamicResource LabelPrimary}"/>
 
-            <Frame
-            BackgroundColor="{DynamicResource ThirdColor}"
-            Grid.Row="3"
-            BorderColor="PeachPuff"
-            CornerRadius="45"
-            HasShadow="True">
+            <Frame BackgroundColor="{DynamicResource ThirdColor}"
+                   Grid.Row="3"
+                   BorderColor="PeachPuff"
+                   CornerRadius="45"
+                   HasShadow="True">
 
-                <Entry
-                Placeholder="We love your opinion!"
-                Margin="10"
-                x:Name="FeedbackEntry"/>
+                <Entry Placeholder="We love your opinion!"
+                       Margin="10"
+                       x:Name="FeedbackEntry"/>
             </Frame>
 
             <Grid Grid.Row="4" HorizontalOptions="End">

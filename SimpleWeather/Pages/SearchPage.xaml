@@ -4,62 +4,56 @@
              x:Class="SimpleWeather.Pages.SearchPage"
              Title="SearchPage"
              Style="{DynamicResource PageStyle}">
+
     <ScrollView VerticalOptions="FillAndExpand">
-        <Frame
-        Margin="20"
-        CornerRadius="40"
-        BackgroundColor="{DynamicResource ThirdColor}">
+        <Frame Margin="20"
+               CornerRadius="40"
+               BackgroundColor="{DynamicResource ThirdColor}">
 
-            <Grid
-            RowDefinitions="0.15*, 0.05*, 0.80*"
-            ColumnDefinitions="0.1*, 0.7*, 0.2*">
+            <Grid RowDefinitions="0.15*, 0.05*, 0.80*"
+                  ColumnDefinitions="0.1*, 0.7*, 0.2*">
 
-                <ImageButton
-                    Source="left_arrow.svg"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Start"
-                Clicked="gobackButton_Clicked"/>
+                <ImageButton Source="left_arrow.svg"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Start"
+                             Clicked="gobackButton_Clicked"/>
 
-                <Entry
-                    Placeholder="Search City"
-                    Margin="20"
-                    PlaceholderColor="DarkGray"
-                    VerticalOptions="Center"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Start"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    HorizontalOptions="FillAndExpand"
-                    x:Name="searchBar"
-                    Text="{Binding SearchQuery, Mode=TwoWay}"
-                    TextColor="{DynamicResource SecondaryColor}"/>
+                <Entry Placeholder="Search City"
+                       Margin="20"
+                       PlaceholderColor="DarkGray"
+                       VerticalOptions="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       HorizontalOptions="FillAndExpand"
+                       x:Name="searchBar"
+                       Text="{Binding SearchQuery, Mode=TwoWay}"
+                       TextColor="{DynamicResource SecondaryColor}"/>
 
-                <ImageButton
-                Source="x_button.svg"
-                Grid.Row="0"
-                Grid.Column="2"
-                WidthRequest="20"
-                HeightRequest="20"
-                x:Name="xButton"
-                Clicked="xButton_Clicked"/>
+                <ImageButton Source="x_button.svg"
+                             Grid.Row="0"
+                             Grid.Column="2"
+                             WidthRequest="20"
+                             HeightRequest="20"
+                             x:Name="xButton"
+                             Clicked="xButton_Clicked"/>
 
-                <BoxView
-                Color="Gray"
-                HeightRequest="1"
-                Grid.Row="1"
-                Grid.ColumnSpan="3"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                <BoxView Color="Gray"
+                         HeightRequest="1"
+                         Grid.Row="1"
+                         Grid.ColumnSpan="3"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"/>
 
-                <Frame
-                Grid.Row="2"
-                CornerRadius="10"
-                Grid.ColumnSpan="3"
-                BackgroundColor="{DynamicResource ThirdColor}">
+                <Frame Grid.Row="2"
+                       CornerRadius="10"
+                       Grid.ColumnSpan="3"
+                       BackgroundColor="{DynamicResource ThirdColor}">
 
                     <ListView x:Name="cityListView"
-                          ItemsSource="{Binding FilteredCityNames}"
-                          ItemTapped="cityListView_ItemTapped">
+                              ItemsSource="{Binding FilteredCityNames}"
+                              ItemTapped="cityListView_ItemTapped">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextCell Text="{Binding}" TextColor="{DynamicResource SecondaryColor}"/>

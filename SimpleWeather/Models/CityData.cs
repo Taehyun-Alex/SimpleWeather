@@ -11,7 +11,7 @@ namespace SimpleWeather.Models
 {
     public static class CityData
     {
-        public class FavCityItem :INotifyPropertyChanged //create a class with properties so we can bind it to xaml colletionview.
+        public class FavCityItem :INotifyPropertyChanged // create a class with properties so we can bind it to xaml colletionview.
         {
             private string cityName;
             private string imageSource;
@@ -58,17 +58,23 @@ namespace SimpleWeather.Models
 
             public event PropertyChangedEventHandler PropertyChanged;
 
-            protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+            protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) // provided by ChatGPT
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
 
+            /// <summary>
+            /// Saves the properties(image source, bool value of isFavourite) of a city.
+            /// </summary>
             public void SaveToPreferences()
             {
                 Preferences.Set($"{CityName}_ImageSource", ImageSource);
                 Preferences.Set($"{CityName}_IsFavorite", IsFavorite);
             }
 
+            /// <summary>
+            /// Loads the properties(image source, bool value of isFavourite) of a city.
+            /// </summary>
             public void LoadFromPreferences()
             {
                 ImageSource = Preferences.Get($"{CityName}_ImageSource", "default_image.png");

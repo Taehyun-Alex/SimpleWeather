@@ -4,6 +4,26 @@
         <name>SimpleWeather</name>
     </assembly>
     <members>
+        <member name="M:SimpleWeather.Models.CityData.FavCityItem.SaveToPreferences">
+            <summary>
+            Saves the properties(image source, bool value of isFavourite) of a city.
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Models.CityData.FavCityItem.LoadFromPreferences">
+            <summary>
+            Loads the properties(image source, bool value of isFavourite) of a city.
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Pages.MainPage.GetLocationByCity(System.String)">
+            <summary>
+            Loads location's information in Celcius.
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Pages.MainPage.GetLocationByCityInFahrenheit(System.String)">
+            <summary>
+            Loads location's information in Fahrenheit.
+            </summary>
+        </member>
         <member name="M:SimpleWeather.Pages.MainPage.RefreshWeatherData">
             <summary>
             reusable async method

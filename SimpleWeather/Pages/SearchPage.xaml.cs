@@ -44,9 +44,8 @@ public partial class SearchPage : ContentPage
 			}
 		}
 	}
-	
 
-    private void FilterCityNames() // got it from chatgpt, try to understand it.
+    private void FilterCityNames() // provided by ChatGPT
     {
         FilteredCityNames = cityNames
             .Where(city => city.IndexOf(SearchQuery, StringComparison.OrdinalIgnoreCase) >= 0)

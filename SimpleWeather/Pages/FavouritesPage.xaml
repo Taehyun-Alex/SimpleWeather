@@ -4,38 +4,25 @@
              x:Class="SimpleWeather.Pages.FavouritesPage"
              Title="FavouritesPage"
              Style="{DynamicResource PageStyle}">
-    <Grid 
-        RowDefinitions="0.1*, 0.9*"
-        Margin="20">
-        
-        <Label 
-            Text="Favourites"
-            HorizontalOptions="Start"
-            FontFamily="Saira-VariableFont.ttf"
-            VerticalTextAlignment="Center"
-            Style="{DynamicResource LabelPrimary}"/>
-        
-        <ImageButton 
-            Source="x_button.svg"
-            HorizontalOptions="End"
-            x:Name="xButton"
-            Clicked="xButton_Clicked"/>
-        
-        <Frame
-            Grid.Row="1"
-            CornerRadius="40"
-            BackgroundColor="{DynamicResource ThirdColor}">
 
+    <Grid RowDefinitions="0.1*, 0.9*" Margin="20">
+
+        <Label Text="Favourites" HorizontalOptions="Start" FontFamily="Saira-VariableFont.ttf"
+               VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}"/>
+
+        <ImageButton Source="x_button.svg" HorizontalOptions="End" x:Name="xButton" Clicked="xButton_Clicked"/>
+
+        <Frame Grid.Row="1" CornerRadius="40" BackgroundColor="{DynamicResource ThirdColor}">
             <CollectionView x:Name="favCityView">
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical"
-                           ItemSpacing="20" />
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="20" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="0.8*, 0.2*">
-                            <Label x:Name="cityName" Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}"/>
-                            <ImageButton Grid.Column="1" x:Name="imageButton" Clicked="ImageButton_Clicked" >
+                            <Label x:Name="cityName" Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center"
+                                   Style="{DynamicResource LabelPrimary}"/>
+                            <ImageButton Grid.Column="1" x:Name="imageButton" Clicked="ImageButton_Clicked">
                                 <ImageButton.Triggers>
                                     <DataTrigger TargetType="ImageButton" Binding="{Binding IsFavorite}" Value="True">
                                         <Setter Property="Source" Value="full_loveheart.svg" />

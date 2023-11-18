@@ -8,7 +8,7 @@ public partial class FavouritesPage : ContentPage
 	{
 		InitializeComponent();
         List<CityData.FavCityItem> favCities = CityData.FavCities.Where(c => c.IsFavorite).ToList(); //make a list of cities that has true boolean value.
-        favCityView.ItemsSource = favCities;
+        favCityView.ItemsSource = favCities; // set the collectionview source to the list above.
     }
 
     private void xButton_Clicked(object sender, EventArgs e)

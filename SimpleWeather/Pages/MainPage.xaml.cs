@@ -2,7 +2,6 @@ using Microsoft.Maui.Controls.PlatformConfiguration;
 using SimpleWeather.Models;
 using System.Timers;
 
-
 namespace SimpleWeather.Pages;
 
 public partial class MainPage : ContentPage
@@ -25,8 +24,8 @@ public partial class MainPage : ContentPage
         // For auto refresh switch
         timer = new System.Timers.Timer(60000); // set up the timer for 60seconds(60000 milliseconds) for autoreloading the mainpage.
         timer.Elapsed += TimerElapsed;
-        isAutoRefreshEnabled = Preferences.Get("AutoRefreshSwitchValue", true); //bring the switch value from settingpage.
-        isDarkModeEnabled = Preferences.Get("DarkModeValue", true); // does this do anything?
+        isAutoRefreshEnabled = Preferences.Get("AutoRefreshSwitchValue", true);
+        isDarkModeEnabled = Preferences.Get("DarkModeValue", true);
     }
 
     private void menuButton_Clicked(object sender, EventArgs e)
@@ -71,7 +70,7 @@ public partial class MainPage : ContentPage
             await DisplayAlert("No Internet", "Please check your internet connection.", "OK");
         }
 
-        LoadFavoritesFromPreferences(); //comes here so source of favButton is loaded first.
+        LoadFavoritesFromPreferences(); // comes here so source of favButton is loaded first.
 
         isNotificationEnabled = Preferences.Get("NotificationSwitchValue", true);
 
@@ -81,8 +80,8 @@ public partial class MainPage : ContentPage
             isCitySet = true; // Mark the city as set
         }
 
-        //OnAppearing, it looks at the city name on the mainpage, and checks for its boolean value.
-        //and according to its boolean value, it sets the source of the imagebutton(favButton)
+        // OnAppearing, it looks at the city name on the mainpage, and checks for its boolean value.
+        // and according to its boolean value, it sets the source of the imagebutton(favButton)
         var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == city);
 
         if (favCity != null)
@@ -90,6 +89,7 @@ public partial class MainPage : ContentPage
             favButton.Source = favCity.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
         }
 
+        // AutoRefresh
         if (isAutoRefreshEnabled)
         {
             timer.Start();
@@ -100,6 +100,7 @@ public partial class MainPage : ContentPage
             timer.Stop();
         }
 
+        // Notification
         if (isNotificationEnabled)
         {
             ShowNotification("Hello user! \nHave a beautiful day");
@@ -126,6 +127,9 @@ public partial class MainPage : ContentPage
         timer.Stop(); // so when we go to different page, timer stops.
     }
 
+    /// <summary>
+    /// Loads location's information in Celcius.
+    /// </summary>
     public async Task GetLocationByCity(string city)
     {
         this.city = city;
@@ -148,6 +152,9 @@ public partial class MainPage : ContentPage
         initial_weather_icon.Source = result.list[0].weather[0].customIcon;
     }
 
+    /// <summary>
+    /// Loads location's information in Fahrenheit.
+    /// </summary>
     public async Task GetLocationByCityInFahrenheit(string city)
     {
         this.city = city;
@@ -208,7 +215,7 @@ public partial class MainPage : ContentPage
     private void TimerElapsed(object sender, ElapsedEventArgs e) 
     {
 
-        Device.BeginInvokeOnMainThread(async () =>
+        Device.BeginInvokeOnMainThread(async () => // provided by ChatGPT
         {
             // Trigger the data refresh
             await RefreshWeatherData();

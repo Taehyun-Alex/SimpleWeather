@@ -8,158 +8,85 @@
 
     <SwipeView>
         <SwipeView.RightItems>
-            <SwipeItems >
+            <SwipeItems>
                 <SwipeItem IconImageSource="full_loveheart.svg" Invoked="OnFavouritesSwipe" BackgroundColor="{DynamicResource ThirdColor}"/>
             </SwipeItems>
         </SwipeView.RightItems>
-        
+
         <RefreshView x:Name="refreshview" Refreshing="refreshview_Refreshing">
-        
-        <StackLayout VerticalOptions="FillAndExpand">
-            <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="FillAndExpand">
+                <ScrollView VerticalOptions="FillAndExpand">
+                    <Grid ColumnDefinitions="30, *, *, *, 30" RowDefinitions="0.1*, 0.1*, 0.1*, 0.1*, 0.6*" Margin="20">
 
+                        <ImageButton Source="menu.svg" x:Name="menuButton" Clicked="menuButton_Clicked"/>
+                        <ImageButton Source="search_button" Grid.Column="6" Grid.Row="0" x:Name="searchButton" Clicked="searchButton_Clicked"/>
+                        <Image Source="reload.svg" Grid.Column="2" HorizontalOptions="Center" Grid.Row="0"/>
 
-                <Grid
-                ColumnDefinitions="30, *, *, *, 30"
-                RowDefinitions="0.1*, 0.1*, 0.1*, 0.1*, 0.6*"
-                Margin="20">
+                        <Label x:Name="city_label" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20"
+                               VerticalTextAlignment="Start" FontFamily="Saira-VariableFont.ttf" Style="{DynamicResource LabelPrimary}"/>
 
-                <ImageButton
-                Source="menu.svg" x:Name="menuButton" Clicked="menuButton_Clicked"/>
+                        <Label x:Name="temp_label" Grid.Row="2" Grid.Column="1" FontSize="40" FontFamily="Saira-VariableFont.ttf"
+                               FontAttributes="Bold" Style="{DynamicResource LabelPrimary}"/>
 
-                <ImageButton
-                Source="search_button"
-                Grid.Column="6"
-                Grid.Row="0"
-                x:Name="searchButton"
-                Clicked="searchButton_Clicked"
-                />
+                        <Label x:Name="time_label" Grid.Row="3" Grid.Column="1" FontSize="20" FontFamily="Saira-VariableFont.ttf"
+                               Style="{DynamicResource LabelPrimary}"/>
 
-                <Image
-                Source="reload.svg"
-                Grid.Column="2"
-                HorizontalOptions="Center"
-                Grid.Row="0"/>
+                        <Label x:Name="humid_label" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20"
+                               FontFamily="Saira-VariableFont.ttf" Style="{DynamicResource LabelPrimary}"/>
 
-                <Label
-                x:Name="city_label"
-                Grid.Row="1"
-                Grid.Column="1"
-                    Grid.ColumnSpan="2"
-                FontSize="20"
-                VerticalTextAlignment="Start"
-                FontFamily="Saira-VariableFont.ttf"
-                Style="{DynamicResource LabelPrimary}"
-                />
+                        <Label x:Name="time_label2" Grid.Row="1" Grid.Column="3" FontFamily="Saira-VariableFont.ttf"
+                               FontAttributes="Bold" Style="{DynamicResource LabelPrimary}"/>
 
-                <Label
-                x:Name="temp_label"
-                Grid.Row="2"
-                Grid.Column="1"
-                FontSize="40"
-                FontFamily="Saira-VariableFont.ttf"
-                FontAttributes="Bold"
-                Style="{DynamicResource LabelPrimary}"/>
+                        <Image x:Name="initial_weather_icon" Grid.Row="2" Grid.Column="3"/>
 
-                <Label
-                x:Name="time_label"
-                Grid.Row="3"
-                Grid.Column="1"
-                FontSize="20"
-                FontFamily="Saira-VariableFont.ttf"
-                    Style="{DynamicResource LabelPrimary}"/>
+                        <ImageButton Source="empty_loveheart.svg" Grid.Column="6" Grid.Row="3" x:Name="favButton" Clicked="favButton_Clicked"/>
 
-                <Label
-                x:Name="humid_label"
-                Grid.Row="3"
-                Grid.Column="2"
-                    Grid.ColumnSpan="2"
-                FontSize="20"
-                FontFamily="Saira-VariableFont.ttf"
-                    Style="{DynamicResource LabelPrimary}"/>
+                        <Frame Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" Margin="20" CornerRadius="30" HasShadow="True"
+                               BackgroundColor="LightGrey" BorderColor="AliceBlue" Background="{DynamicResource ThirdColor}">
 
-                <Label
-                x:Name="time_label2"
-                Grid.Row="1"
-                Grid.Column="3"
-                FontFamily="Saira-VariableFont.ttf"
-                FontAttributes="Bold"
-                    Style="{DynamicResource LabelPrimary}"/>
+                            <CollectionView x:Name="CvWeather">
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid ColumnDefinitions="*, 2*, *, *">
+                                            <Label Grid.Column="0" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="{Binding dateTime, StringFormat='{}{0:dd/MMM hh:mm tt}'}"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
 
-                <Image
-                x:Name="initial_weather_icon"
-                Grid.Row="2"
-                Grid.Column="3"/>
+                                            <Label Grid.Column="1" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="{Binding main.humidity}" />
+                                                        <Span Text="% humidity" />
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
 
-                <ImageButton
-                Source="empty_loveheart.svg"
-                Grid.Column="6"
-                Grid.Row="3"
-                x:Name="favButton"
-                Clicked="favButton_Clicked">
-                </ImageButton>
+                                            <Image Source="{Binding ImageSource}" Grid.Row="5" Grid.Column="2" HeightRequest="50"/>
 
-                <Frame
-                Grid.Row="4"
-                Grid.Column="0"
-                Grid.ColumnSpan="5"
-                Margin="20"
-                CornerRadius="30"
-                HasShadow="True"
-                BackgroundColor="LightGrey"
-                BorderColor="AliceBlue"
-                    Background="{DynamicResource ThirdColor}">
+                                            <Label Grid.Column="3" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="{Binding main.temp}" />
+                                                        <Span Text="{Binding UnitType}"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
 
-                    <CollectionView x:Name="CvWeather">
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout Orientation="Vertical"
-                                           ItemSpacing="20" />
-                        </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid ColumnDefinitions="*, 2*, *, *">
-                                        <Label Grid.Column="0" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="{Binding dateTime, StringFormat='{}{0:dd/MMM hh:mm tt}'}"/>
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-
-                                        <Label  Grid.Column="1" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="{Binding main.humidity}" />
-                                                <Span Text="% humidity" />
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-
-                                    <Image
-                                    Source="{Binding ImageSource}"
-                                    Grid.Row="5"
-                                    Grid.Column="2"
-                                    HeightRequest="50"/>
-
-                                        <Label Grid.Column="3" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}">
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="{Binding main.temp}" />
-                                                <Span Text="{Binding UnitType}"/>
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-
-                                </Grid>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
-                </Frame>
-            </Grid>
-
-            </ScrollView>
-
-        </StackLayout>
-    </RefreshView>
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </Frame>
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </RefreshView>
     </SwipeView>
 </ContentPage>

@@ -137,7 +137,7 @@
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span Text="{Binding main.temp}" />
-                                                <Span Text="°C"/>
+                                                <Span Text="{Binding UnitType}"/>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>

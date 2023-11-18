@@ -14,6 +14,7 @@ public partial class MainPage : ContentPage
     private bool isAutoRefreshEnabled;
     private bool isNotificationEnabled;
     private bool isDarkModeEnabled;
+    
 
     [Obsolete]
     public MainPage()
@@ -112,6 +113,7 @@ public partial class MainPage : ContentPage
         foreach (var item in result.list)
         {
             item.ImageSource = item.weather[0].customIcon;
+            item.UnitType = "°C";
             WeatherList.Add(item);
         }
         CvWeather.ItemsSource = null;
@@ -133,6 +135,7 @@ public partial class MainPage : ContentPage
         foreach (var item in result.list)
         {
             item.ImageSource = item.weather[0].customIcon;
+            item.UnitType = "°F";
             WeatherList.Add(item);
         }
         CvWeather.ItemsSource = null;

@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
@@ -19,6 +21,7 @@ namespace SimpleWeather.Models.ApiModels //used https://json2csharp.com/ and pas
         public int timezone { get; set; }
         public int sunrise { get; set; }
         public int sunset { get; set; }
+
     }
 
     public class Clouds
@@ -32,7 +35,7 @@ namespace SimpleWeather.Models.ApiModels //used https://json2csharp.com/ and pas
         public double lon { get; set; }
     }
 
-    public class List
+    public class List : INotifyPropertyChanged
     {
         public int dt { get; set; }
         public DateTime currentTime => DateTime.Now;
@@ -48,6 +51,27 @@ namespace SimpleWeather.Models.ApiModels //used https://json2csharp.com/ and pas
         public Rain rain { get; set; }
 
         public string ImageSource { get; set; }
+
+        private string _unitType;
+        public string UnitType // from ChatGPT
+        {
+            get => _unitType;
+            set
+            {
+                if (_unitType != value)
+                {
+                    _unitType = value;
+                    OnPropertyChanged(nameof(UnitType));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged; // from ChatGPT
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) // from ChatGPT
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
     public class Main

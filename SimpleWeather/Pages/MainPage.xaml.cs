@@ -49,6 +49,8 @@ public partial class MainPage : ContentPage
 
             // Update the source of the favButton based on the boolean value
             favButton.Source = favCity.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
+
+            favCity.SaveToPreferences();
         }
 
     }
@@ -63,6 +65,8 @@ public partial class MainPage : ContentPage
     protected async override void OnAppearing()
     {
         base.OnAppearing();
+
+        LoadFavoritesFromPreferences();
 
         isNotificationEnabled = Preferences.Get("NotificationSwitchValue", true);
 
@@ -94,6 +98,16 @@ public partial class MainPage : ContentPage
         if (isNotificationEnabled)
         {
             ShowNotification("Hello user! \nHave a beautiful day");
+        }
+
+        
+    }
+
+    private void LoadFavoritesFromPreferences()
+    {
+        foreach (var favCity in CityData.FavCities)
+        {
+            favCity.LoadFromPreferences();
         }
     }
 

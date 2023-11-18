@@ -62,6 +62,18 @@ namespace SimpleWeather.Models
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
+
+            public void SaveToPreferences()
+            {
+                Preferences.Set($"{CityName}_ImageSource", ImageSource);
+                Preferences.Set($"{CityName}_IsFavorite", IsFavorite);
+            }
+
+            public void LoadFromPreferences()
+            {
+                ImageSource = Preferences.Get($"{CityName}_ImageSource", "default_image.png");
+                IsFavorite = Preferences.Get($"{CityName}_IsFavorite", false);
+            }
         }
 
         public static List<FavCityItem> FavCities { get; } = new List<FavCityItem> //manual list of cities with boolean value

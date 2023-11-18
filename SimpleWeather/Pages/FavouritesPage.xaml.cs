@@ -24,6 +24,9 @@ public partial class FavouritesPage : ContentPage
 
             // Update the source of the ImageButton based on the boolean value
             imageButton.Source = favCityItem.IsFavorite ? "full_loveheart.svg" : "empty_loveheart.svg";
-        }
+            
+            favCityItem.SaveToPreferences();
+         }
     }
+
 }

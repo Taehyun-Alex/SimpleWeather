@@ -34,7 +34,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="0.8*, 0.2*">
-                            <Label Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}"/>
+                            <Label x:Name="cityName" Grid.Column="0" Text="{Binding CityName}" VerticalTextAlignment="Center" Style="{DynamicResource LabelPrimary}"/>
                             <ImageButton Grid.Column="1" x:Name="imageButton" Clicked="ImageButton_Clicked" >
                                 <ImageButton.Triggers>
                                     <DataTrigger TargetType="ImageButton" Binding="{Binding IsFavorite}" Value="True">

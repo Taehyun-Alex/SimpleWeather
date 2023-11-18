@@ -4,41 +4,42 @@
              x:Class="SimpleWeather.Pages.SettingPage"
              Title="SettingPage"
              Style="{DynamicResource PageStyle}">
-    
-    <Grid 
+
+    <ScrollView VerticalOptions="FillAndExpand">
+        <Grid 
         RowDefinitions="0.1*, 0.45*, 0.05*, 0.35*, 0.05*"
         Margin="20">
-        
-        <ActivityIndicator x:Name="activityIndicator"
+
+            <ActivityIndicator x:Name="activityIndicator"
                            IsRunning="False"
                            Color="Purple"
                            IsVisible="False"/>
-        
-        <Label
+
+            <Label
             Text="Weather Settings"
             HorizontalTextAlignment="Start"
             VerticalTextAlignment="Center"
             FontFamily="Saira-VariableFont.ttf"
             Style="{DynamicResource LabelPrimary}"/>
-        
-        <ImageButton 
+
+            <ImageButton 
             Source="x_button.svg"
             HorizontalOptions="End"
             x:Name="xButton"
             Clicked="xButton_Clicked"/>
 
-        <Frame
+            <Frame
             BackgroundColor="{DynamicResource ThirdColor}"
             Grid.Row="1"
             BorderColor="PeachPuff"
             CornerRadius="10"
             HasShadow="True">
 
-            <Grid
+                <Grid
                 RowDefinitions="*, *, *, *"
                 ColumnDefinitions="0.4*, 0.3*, 0.3*">
 
-                <Label
+                    <Label
                     Text="Unit (Off °F / On °C)"
                     Grid.Row="0"
                     Grid.ColumnSpan="2"
@@ -47,14 +48,14 @@
                     VerticalTextAlignment="Center"
                     Style="{DynamicResource LabelPrimary}"/>
 
-                <Switch IsToggled="True"
+                    <Switch IsToggled="True"
                         Grid.Column="2"
                         OnColor="AliceBlue"
                         ThumbColor="Black"
                         x:Name="unitSwitch"
                         Toggled="unitSwitch_Toggled"/>
 
-                <Label
+                    <Label
                     Text="Auto Refresh (Every 1min)"
                     Grid.Row="1"
                     Grid.ColumnSpan="2"
@@ -63,7 +64,7 @@
                     VerticalTextAlignment="Center"
                     Style="{DynamicResource LabelPrimary}"/>
 
-                <Switch IsToggled="False"
+                    <Switch IsToggled="False"
                         Grid.Row="1"
                         Grid.Column="2"
                         OnColor="AliceBlue"
@@ -71,7 +72,7 @@
                         x:Name="autoRefreshSwitch"
                         Toggled="autoRefreshSwitch_Toggled"/>
 
-                <Label
+                    <Label
                     Text="Notifications"
                     Grid.Row="2"
                     Grid.ColumnSpan="2"
@@ -80,7 +81,7 @@
                     VerticalTextAlignment="Center"
                     Style="{DynamicResource LabelPrimary}"/>
 
-                <Switch IsToggled="False"
+                    <Switch IsToggled="False"
                         Grid.Row="2"
                         Grid.Column="2"
                         OnColor="AliceBlue"
@@ -88,7 +89,7 @@
                         x:Name="notificationSwitch"
                         Toggled="notificationSwitch_Toggled"/>
 
-                <Label Text="Dark mode"
+                    <Label Text="Dark mode"
                        Grid.Row="3"
                        Grid.ColumnSpan="2"
                        FontFamily="Saira-VariableFont.ttf"
@@ -96,17 +97,17 @@
                        VerticalTextAlignment="Center"
                        Style="{DynamicResource LabelPrimary}"/>
 
-                <Switch IsToggled="False"
+                    <Switch IsToggled="False"
                         Grid.Row="3"
                         Grid.Column="2"
                         OnColor="AliceBlue"
                         ThumbColor="Black"
                         x:Name="darkModeSwitch"
                         Toggled="darkModeSwitch_Toggled"/>
-            </Grid>
-        </Frame>
+                </Grid>
+            </Frame>
 
-        <Label
+            <Label
             Text="Room for improvement?"
             Grid.Row="2"
             VerticalTextAlignment="Center"
@@ -114,22 +115,23 @@
             Margin="20,0,0,0"
             Style="{DynamicResource LabelPrimary}"/>
 
-        <Frame
+            <Frame
             BackgroundColor="{DynamicResource ThirdColor}"
             Grid.Row="3"
             BorderColor="PeachPuff"
             CornerRadius="45"
             HasShadow="True">
-            
-            <Entry
+
+                <Entry
                 Placeholder="We love your opinion!"
                 Margin="10"
                 x:Name="FeedbackEntry"/>
-        </Frame>
- 
-        <Grid Grid.Row="4" HorizontalOptions="End">
-            <ImageButton Source="submit_button.svg" Clicked="ImageButton_Clicked" WidthRequest="100" HeightRequest="40"/>
-            <Label Text="Submit" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Saira-VariableFont.ttf" FontAttributes="Bold" Style="{DynamicResource LabelPrimary}"/>
+            </Frame>
+
+            <Grid Grid.Row="4" HorizontalOptions="End">
+                <ImageButton Source="submit_button.svg" Clicked="ImageButton_Clicked" WidthRequest="100" HeightRequest="40"/>
+                <Label Text="Submit" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Saira-VariableFont.ttf" FontAttributes="Bold" Style="{DynamicResource LabelPrimary}"/>
+            </Grid>
         </Grid>
-    </Grid>
+    </ScrollView>
 </ContentPage>

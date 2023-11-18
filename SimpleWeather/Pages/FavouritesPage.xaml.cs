@@ -3,7 +3,8 @@ namespace SimpleWeather.Pages;
 
 public partial class FavouritesPage : ContentPage
 {
-	public FavouritesPage()
+    private MainPage mainPage;
+    public FavouritesPage()
 	{
 		InitializeComponent();
         List<CityData.FavCityItem> favCities = CityData.FavCities.Where(c => c.IsFavorite).ToList(); //make a list of cities that has true boolean value.

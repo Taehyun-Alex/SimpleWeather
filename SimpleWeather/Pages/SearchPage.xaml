@@ -4,73 +4,70 @@
              x:Class="SimpleWeather.Pages.SearchPage"
              Title="SearchPage"
              Style="{DynamicResource PageStyle}">
-    <Frame
+    <ScrollView VerticalOptions="FillAndExpand">
+        <Frame
         Margin="20"
         CornerRadius="40"
         BackgroundColor="{DynamicResource ThirdColor}">
 
-        <Grid
-            RowDefinitions="0.1*, 0.05*, 0.85*"
-            ColumnDefinitions="0.9*, 0.1*">
-
-            <HorizontalStackLayout>
+            <Grid
+            RowDefinitions="0.15*, 0.05*, 0.80*"
+            ColumnDefinitions="0.1*, 0.7*, 0.2*">
 
                 <ImageButton
                     Source="left_arrow.svg"
-                    Grid.Row="0"
-                    VerticalOptions="Start"
+                    VerticalOptions="Center"
                     HorizontalOptions="Start"
-                    Margin="20"/>
+                Clicked="gobackButton_Clicked"/>
 
                 <Entry
                     Placeholder="Search City"
+                    Margin="20"
                     PlaceholderColor="DarkGray"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Start"
                     Grid.Row="0"
-                    VerticalOptions="Start"
+                    Grid.Column="1"
                     HorizontalOptions="FillAndExpand"
-                    Margin="20,0"
-                    MaximumWidthRequest="300"
                     x:Name="searchBar"
                     Text="{Binding SearchQuery, Mode=TwoWay}"
                     TextColor="{DynamicResource SecondaryColor}"/>
-            </HorizontalStackLayout>
 
-            <ImageButton
+                <ImageButton
                 Source="x_button.svg"
                 Grid.Row="0"
-                Grid.Column="1"
-                VerticalOptions="Start"
-                HorizontalOptions="End"
-                Margin="20" 
-                x:Name="gobackButton"
-                Clicked="gobackButton_Clicked"/>
+                Grid.Column="2"
+                WidthRequest="20"
+                HeightRequest="20"
+                x:Name="xButton"
+                Clicked="xButton_Clicked"/>
 
-            <BoxView
+                <BoxView
                 Color="Gray"
                 HeightRequest="1"
                 Grid.Row="1"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
+                Grid.ColumnSpan="3"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
 
-            <Frame
+                <Frame
                 Grid.Row="2"
                 CornerRadius="10"
-                Grid.ColumnSpan="2"
+                Grid.ColumnSpan="3"
                 BackgroundColor="{DynamicResource ThirdColor}">
 
-                <ListView x:Name="cityListView"
+                    <ListView x:Name="cityListView"
                           ItemsSource="{Binding FilteredCityNames}"
                           ItemTapped="cityListView_ItemTapped">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextCell Text="{Binding}" TextColor="{DynamicResource SecondaryColor}"/>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </Frame>
-        </Grid>
-    </Frame>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding}" TextColor="{DynamicResource SecondaryColor}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Frame>
+            </Grid>
+        </Frame>
+    </ScrollView>
 </ContentPage>

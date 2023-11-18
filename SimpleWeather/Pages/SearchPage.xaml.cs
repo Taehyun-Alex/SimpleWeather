@@ -79,4 +79,9 @@ public partial class SearchPage : ContentPage
             }
         }
     }
+
+    private void xButton_Clicked(object sender, EventArgs e)
+    {
+        searchBar.Text = "";
+    }
 }

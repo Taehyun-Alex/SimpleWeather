@@ -124,7 +124,7 @@ public partial class SettingPage : ContentPage
                 FeedbackEntry.Text = "";
 
                 // Display a message
-                DisplayAlert("Success", "Your input has been saved.", "OK");
+                DisplayAlert("Success", "Thank you\nYour feedback has been saved.", "OK");
             }
             catch (Exception ex)
             {

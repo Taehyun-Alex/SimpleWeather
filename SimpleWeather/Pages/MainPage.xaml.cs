@@ -65,8 +65,13 @@ public partial class MainPage : ContentPage
     protected async override void OnAppearing()
     {
         base.OnAppearing();
+        
+        if (!CheckInternetConnection())
+        {
+            await DisplayAlert("No Internet", "Please check your internet connection.", "OK");
+        }
 
-        LoadFavoritesFromPreferences();
+        LoadFavoritesFromPreferences(); //comes here so source of favButton is loaded first.
 
         isNotificationEnabled = Preferences.Get("NotificationSwitchValue", true);
 
@@ -100,7 +105,11 @@ public partial class MainPage : ContentPage
             ShowNotification("Hello user! \nHave a beautiful day");
         }
 
-        
+    }
+
+    private bool CheckInternetConnection()
+    {
+        return Connectivity.NetworkAccess == NetworkAccess.Internet;
     }
 
     private void LoadFavoritesFromPreferences()
@@ -186,7 +195,10 @@ public partial class MainPage : ContentPage
     /// </summary>
     private async void refreshview_Refreshing(object sender, EventArgs e)
     {
-        await RefreshWeatherData();
+        if (CheckInternetConnection())
+        {
+            await RefreshWeatherData();
+        }
     }
 
     /// <summary>

@@ -14,7 +14,7 @@ public partial class SearchPage : ContentPage
         FilteredCityNames = cityNames;
     }
 
-    private List<string> cityNames = CityData.FavCityNames; // calling the reusable city list from CityData class.
+    private List<string> cityNames = CityData.SortedFavCityNames; // calling the reusable city list from CityData class.
 
 
     private string searchQuery;

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using SimpleWeather.Models.ApiModels;
 
 namespace SimpleWeather.Models
 {
@@ -85,9 +86,40 @@ namespace SimpleWeather.Models
             new FavCityItem { CityName = "Bangkok", ImageSource = "empty_loveheart.png", IsFavorite = false },
             new FavCityItem { CityName = "Makassar", ImageSource = "empty_loveheart.png", IsFavorite = false },
             new FavCityItem { CityName = "Incheon", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Beijing", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Budapest", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Canberra", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Adelaide", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Darwin", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Melbourne", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Sydney", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Chicago", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Dublin", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Ha Noi", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Havana", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Helsinki", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Hong Kong", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Istanbul", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Honolulu", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Jerusalem", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Kathmandu", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Lisbon", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Los Angeles", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Luxembourg", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Madrid", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Manila", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Mexico City", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Milan", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Montreal", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Moscow", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Mumbai", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Munich", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Nazareth", ImageSource = "empty_loveheart.png", IsFavorite = false },
+            new FavCityItem { CityName = "Ottawa", ImageSource = "empty_loveheart.png", IsFavorite = false }
 
         };
 
         public static List<string> FavCityNames => FavCities.Select(favCity => favCity.CityName).ToList(); //using the list above, extract a list of city names.
+        public static List<string> SortedFavCityNames => FavCityNames.OrderBy(city => city).ToList(); // sort the list above.
     }
 }

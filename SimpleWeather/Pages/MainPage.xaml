@@ -38,6 +38,7 @@
                 x:Name="city_label"
                 Grid.Row="1"
                 Grid.Column="1"
+                    Grid.ColumnSpan="2"
                 FontSize="20"
                 VerticalTextAlignment="Start"
                 FontFamily="Saira-VariableFont.ttf"

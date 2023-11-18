@@ -92,4 +92,50 @@ public partial class SettingPage : ContentPage
         }
         Preferences.Set("DarkModeValue", e.Value);
     }
+
+    private void ImageButton_Clicked(object sender, EventArgs e) // provided by ChatGPT
+    {
+        // Get the text from the Entry
+        string entryText = FeedbackEntry.Text;
+
+        if (!string.IsNullOrEmpty(entryText))
+        {
+            // Get the writable directory
+            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+
+            // Combine the directory with the file name
+            string filePath = Path.Combine(folderPath, "Feedback.txt");
+
+            try
+            {
+                // Check if the file exists
+                if (!File.Exists(filePath))
+                {
+                    // Create the file if it doesn't exist
+                    File.WriteAllText(filePath, entryText);
+                }
+                else
+                {
+                    // Append the text to the existing file
+                    File.AppendAllText(filePath, Environment.NewLine + entryText);
+                }
+
+                // Clear the entry
+                FeedbackEntry.Text = "";
+
+                // Display a message
+                DisplayAlert("Success", "Your input has been saved.", "OK");
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions, e.g., display an error message
+                DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
+            }
+        }
+        else
+        {
+            // Display an alert if the entry is empty
+            DisplayAlert("Error", "Please enter some text.", "OK");
+        }
+    }
 }

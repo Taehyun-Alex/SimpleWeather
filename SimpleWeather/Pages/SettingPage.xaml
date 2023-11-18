@@ -122,11 +122,12 @@
             
             <Entry
                 Placeholder="We love your opinion!"
-                Margin="10"/>
+                Margin="10"
+                x:Name="FeedbackEntry"/>
         </Frame>
  
         <Grid Grid.Row="4" HorizontalOptions="End">
-            <ImageButton Source="submit_button.svg"/>
+            <ImageButton Source="submit_button.svg" Clicked="ImageButton_Clicked" WidthRequest="100" HeightRequest="40"/>
             <Label Text="Submit" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Saira-VariableFont.ttf" FontAttributes="Bold" Style="{DynamicResource LabelPrimary}"/>
         </Grid>
     </Grid>

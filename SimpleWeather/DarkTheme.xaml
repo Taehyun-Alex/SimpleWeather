@@ -9,7 +9,9 @@
         <Setter x:Name="TextColorPrimary" Property="TextColor" Value="GhostWhite"/>
     </Style>
 
+
     <Color x:Key="PrimaryColor">MidnightBlue</Color>
     <Color x:Key="SecondaryColor">LightSteelBlue</Color>
     <Color x:Key="ThirdColor">Purple</Color>
+
 </ResourceDictionary>

@@ -9,7 +9,8 @@ public partial class MainPage : ContentPage
     public List<Models.ApiModels.List> WeatherList;
     public string city;
     private bool isCitySet = false; //set this boolean to see if the city has been set.
-    private readonly System.Timers.Timer timer; 
+    private readonly System.Timers.Timer timer;
+    private bool isUnitConversionEnabled;
     private bool isAutoRefreshEnabled;
     private bool isNotificationEnabled;
     private bool isDarkModeEnabled;
@@ -24,8 +25,21 @@ public partial class MainPage : ContentPage
         // For auto refresh switch
         timer = new System.Timers.Timer(60000); // set up the timer for 60seconds(60000 milliseconds) for autoreloading the mainpage.
         timer.Elapsed += TimerElapsed;
+
+        isUnitConversionEnabled = Preferences.Get("UnitSwitchValue", true);
         isAutoRefreshEnabled = Preferences.Get("AutoRefreshSwitchValue", true);
         isDarkModeEnabled = Preferences.Get("DarkModeValue", true);
+
+        if (isDarkModeEnabled)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(new DarkTheme());
+        }
+        else
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
+        }
     }
 
     private void menuButton_Clicked(object sender, EventArgs e)
@@ -76,13 +90,22 @@ public partial class MainPage : ContentPage
 
         if (!isCitySet) // if the city has not set yet, the default will be Perth.
         {
-            await GetLocationByCity("Perth");
-            isCitySet = true; // Mark the city as set
-        }
+            if (isUnitConversionEnabled)
+            {
+                await GetLocationByCity("Perth");
+                isCitySet = true; // Mark the city as set
+            }
+            else
+            {
+                await GetLocationByCityInFahrenheit("Perth");
+                isCitySet = true; // Mark the city as set
+            }
 
-        // OnAppearing, it looks at the city name on the mainpage, and checks for its boolean value.
-        // and according to its boolean value, it sets the source of the imagebutton(favButton)
-        var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == city);
+            }
+
+            // OnAppearing, it looks at the city name on the mainpage, and checks for its boolean value.
+            // and according to its boolean value, it sets the source of the imagebutton(favButton)
+            var favCity = CityData.FavCities.FirstOrDefault(c => c.CityName == city);
 
         if (favCity != null)
         {
@@ -106,6 +129,7 @@ public partial class MainPage : ContentPage
             ShowNotification("Hello user! \nHave a beautiful day");
         }
 
+        
     }
 
     private bool CheckInternetConnection()

@@ -64,12 +64,12 @@
 	.zero	3
 	.xword	.L.compressed_assembly_data.10	// data
 
-	.word	0x1e1c0	// uncompressed_file_size
+	.word	0x1e198	// uncompressed_file_size
 	.byte	0x0	// loaded
 	.zero	3
 	.xword	.L.compressed_assembly_data.11	// data
 
-	.word	0x18afa0	// uncompressed_file_size
+	.word	0x18af98	// uncompressed_file_size
 	.byte	0x0	// loaded
 	.zero	3
 	.xword	.L.compressed_assembly_data.12	// data
@@ -84,7 +84,7 @@
 	.zero	3
 	.xword	.L.compressed_assembly_data.14	// data
 
-	.word	0x8e7a0	// uncompressed_file_size
+	.word	0x8e788	// uncompressed_file_size
 	.byte	0x0	// loaded
 	.zero	3
 	.xword	.L.compressed_assembly_data.15	// data
@@ -149,7 +149,7 @@
 	.zero	3
 	.xword	.L.compressed_assembly_data.27	// data
 
-	.word	0x8c00	// uncompressed_file_size
+	.word	0x8a00	// uncompressed_file_size
 	.byte	0x0	// loaded
 	.zero	3
 	.xword	.L.compressed_assembly_data.28	// data
@@ -179,7 +179,7 @@
 	.zero	3
 	.xword	.L.compressed_assembly_data.33	// data
 
-	.word	0x1e800	// uncompressed_file_size
+	.word	0x1e600	// uncompressed_file_size
 	.byte	0x0	// loaded
 	.zero	3
 	.xword	.L.compressed_assembly_data.34	// data
@@ -209,7 +209,7 @@
 	.zero	3
 	.xword	.L.compressed_assembly_data.39	// data
 
-	.word	0x13f200	// uncompressed_file_size
+	.word	0x13f000	// uncompressed_file_size
 	.byte	0x0	// loaded
 	.zero	3
 	.xword	.L.compressed_assembly_data.40	// data
@@ -804,7 +804,7 @@
 	.zero	3
 	.xword	.L.compressed_assembly_data.158	// data
 
-	.word	0x1a9200	// uncompressed_file_size
+	.word	0x1a9000	// uncompressed_file_size
 	.byte	0x0	// loaded
 	.zero	3
 	.xword	.L.compressed_assembly_data.159	// data
@@ -894,7 +894,7 @@
 	.section	.data, "aw", @progbits
 
 	//
-	// Generated from instance of: Xamarin.Android.Tasks.CompressedAssembliesNativeAssemblyGenerator+CompressedAssemblies, Xamarin.Android.Build.Tasks, Version=12.3.99.76, Culture=neutral, PublicKeyToken=84e04ff9cfb79065
+	// Generated from instance of: Xamarin.Android.Tasks.CompressedAssembliesNativeAssemblyGenerator+CompressedAssemblies, Xamarin.Android.Build.Tasks, Version=12.3.99.109, Culture=neutral, PublicKeyToken=84e04ff9cfb79065
 	//
 	.type	compressed_assemblies, @object
 	.global	compressed_assemblies
@@ -907,4 +907,4 @@ compressed_assemblies:
 	.xword	.L.compressed_assembly_descriptors.0	// descriptors
 	.size	compressed_assemblies, 16
 
-	.ident	"Xamarin.Android remotes/origin/release/6.0.4xx @ af4a25d50f5a602c77d05c2ec8c8644c00cffbbd"
+	.ident	"Xamarin.Android remotes/origin/release/6.0.4xx @ 25cb50d78ac929b03d2ec6f1a4c0a7aeb9bcebc3"

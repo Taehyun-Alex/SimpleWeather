@@ -28,7 +28,7 @@ public partial class MainPage : ContentPage
 
         isUnitConversionEnabled = Preferences.Get("UnitSwitchValue", true);
         isAutoRefreshEnabled = Preferences.Get("AutoRefreshSwitchValue", true);
-        isDarkModeEnabled = Preferences.Get("DarkModeValue", true);
+        isDarkModeEnabled = Preferences.Get("DarkModeValue", false);
 
         if (isDarkModeEnabled)
         {

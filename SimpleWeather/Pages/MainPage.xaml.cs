@@ -74,11 +74,9 @@ public partial class MainPage : ContentPage
         Navigation.PushAsync(searchPage);
     }
 
-    [Obsolete]
+
     protected async override void OnAppearing()
     {
-        base.OnAppearing();
-        
         if (!CheckInternetConnection())
         {
             await DisplayAlert("No Internet", "Please check your internet connection.", "OK");
@@ -100,8 +98,7 @@ public partial class MainPage : ContentPage
                 await GetLocationByCityInFahrenheit("Perth");
                 isCitySet = true; // Mark the city as set
             }
-
-            }
+        }
 
             // OnAppearing, it looks at the city name on the mainpage, and checks for its boolean value.
             // and according to its boolean value, it sets the source of the imagebutton(favButton)
@@ -129,7 +126,9 @@ public partial class MainPage : ContentPage
             ShowNotification("Hello user! \nHave a beautiful day");
         }
 
-        
+        await RefreshWeatherData();
+
+        base.OnAppearing();
     }
 
     private bool CheckInternetConnection()
@@ -207,7 +206,7 @@ public partial class MainPage : ContentPage
     private async Task RefreshWeatherData()
     {
         bool unitSwitchValue = Preferences.Get("UnitSwitchValue", true);
-        if (unitSwitchValue) // fix this
+        if (unitSwitchValue)
         {
             // The switch is toggled, use Celsius
             await GetLocationByCity(city);
@@ -217,8 +216,7 @@ public partial class MainPage : ContentPage
             // The switch is not toggled, use Fahrenheit
             await GetLocationByCityInFahrenheit(city);
         }
-
-        refreshview.IsRefreshing = false;
+        
     }
 
     /// <summary>
@@ -229,6 +227,7 @@ public partial class MainPage : ContentPage
         if (CheckInternetConnection())
         {
             await RefreshWeatherData();
+            refreshview.IsRefreshing = false;
         }
     }
 

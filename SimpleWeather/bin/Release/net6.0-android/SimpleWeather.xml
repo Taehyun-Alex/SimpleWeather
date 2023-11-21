@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleWeather</name>
+    </assembly>
+    <members>
+        <member name="M:SimpleWeather.Models.CityData.FavCityItem.SaveToPreferences">
+            <summary>
+            Saves the properties(image source, bool value of isFavourite) of a city.
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Models.CityData.FavCityItem.LoadFromPreferences">
+            <summary>
+            Loads the properties(image source, bool value of isFavourite) of a city.
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Pages.MainPage.GetLocationByCity(System.String)">
+            <summary>
+            Loads location's information in Celcius.
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Pages.MainPage.GetLocationByCityInFahrenheit(System.String)">
+            <summary>
+            Loads location's information in Fahrenheit.
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Pages.MainPage.RefreshWeatherData">
+            <summary>
+            reusable async method
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Pages.MainPage.refreshview_Refreshing(System.Object,System.EventArgs)">
+            <summary>
+            For refreshview property in xaml file
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Pages.MainPage.TimerElapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            if the timer reaches the time, it performs the action.
+            </summary>
+        </member>
+        <member name="M:SimpleWeather.Pages.MainPage.HandleAutoRefresh(System.Boolean)">
+            <summary>
+            using the switch value from the setting page, it determines whether to refresh.
+            </summary>
+            <param name="isAutoRefreshEnabled"></param>
+        </member>
+    </members>
+</doc>

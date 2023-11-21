@@ -1,3 +1,5 @@
+using SimpleWeather.Models.ApiModels;
+
 namespace SimpleWeather.Pages;
 
 public partial class SettingPage : ContentPage
@@ -91,6 +93,7 @@ public partial class SettingPage : ContentPage
             Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
         }
         Preferences.Set("DarkModeValue", e.Value);
+
     }
 
     private void ImageButton_Clicked(object sender, EventArgs e) // provided by ChatGPT

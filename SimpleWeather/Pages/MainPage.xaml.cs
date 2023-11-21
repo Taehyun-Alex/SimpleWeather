@@ -229,6 +229,10 @@ public partial class MainPage : ContentPage
             await RefreshWeatherData();
             refreshview.IsRefreshing = false;
         }
+        else
+        {
+            refreshview.IsRefreshing = false;
+        }
     }
 
     /// <summary>
